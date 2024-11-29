@@ -1,11 +1,11 @@
 <script setup>
-import { CentralTheme } from "@/components";
+import { CentralTheme, AsideHistory } from "@/components";
 </script>
 
 <template>
     <header>
         <div class="container-historic">
-            <img src="@/assets/images/header/three-bars.png" alt="">
+            <AsideHistory/>
         </div>
         <div class="container-theme">
             <CentralTheme text="Geral" color="background-color: #DCDCDC;" />
