@@ -13,8 +13,10 @@ import { HeaderHome } from '@/components';
         </div>
 
         <div class="info-home-container">
+            <div class="i-as-container">
             <h1 class="text t1">I as</h1>
-            <h1 class="text t2">Educator</h1>
+            <h1 class="text t2"></h1>
+            </div>
             <p class="text t3">an AI to help you with the ENEM and entrance exams</p>
         </div>
         </div>

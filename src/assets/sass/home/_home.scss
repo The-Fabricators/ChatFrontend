@@ -1,5 +1,33 @@
 @import '@/assets/sass/_main.scss';
 
+.t2 {
+    &::after {
+        content: 'Educator';
+        animation-name: changeWord;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+      }
+}
+
+@keyframes changeWord {
+    25% {
+        content: 'Educator';
+        color: #7A1F40;
+    }
+    50% {
+        content: 'Writer';
+        color: #B89E35;
+    }
+    75% {
+        content: 'Reader';
+        color: #A32287 ;
+    }
+    100% {
+        content: 'Quimic';
+        color: #1D6828;
+    }
+}
+
 @media screen and (min-width: 0px) and (min-device-width: 0px){
     .main-home {
       width: 100%;
@@ -52,6 +80,16 @@
       text-align: center;
       margin-top: 50px;
     }
+
+    .i-as-container {
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        
+    }
   }
   
   @media screen and (min-width: 450px) and (min-device-width: 500px) {
@@ -70,6 +108,7 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+        line-height: 40px;
     }
   
     .home-container {
@@ -80,7 +119,7 @@
       width: 320px;
       display: flex;
       justify-content: center;
-      margin: 0px;
+      margin: 0 0px 0px 100px;
       img {
         width: 320px;
         height: 331px;
@@ -93,6 +132,16 @@
       display: flex;
       justify-content: normal;
       align-items: center;
+      margin: 0px 0px 0px 0px;
+    }
+
+    .i-as-container {
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        
     }
   
     .t1 {
