@@ -1,5 +1,6 @@
 <script setup>
-import { CentralTheme, AsideHistory } from "@/components";
+
+import { CentralTheme, AsideSelectorDesktop, AsideHistory } from "@/components";
 import { useRoute } from "vue-router";
 import { CentralTheme } from "@/components";
 import { whichText, whichColor } from "@/utils";
@@ -16,7 +17,7 @@ const route = useRoute();
             <CentralTheme :text="whichText(route)" :color="whichColor(route)" />
         </div>
         <div class="container-type-themes">
-            <img src="@/assets/images/header/widget.png" alt="">
+            <AsideSelectorDesktop/>
         </div>
     </header>
 </template>
