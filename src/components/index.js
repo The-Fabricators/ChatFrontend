@@ -1,3 +1,5 @@
+import SmallHeaderChat from "@/components/global/header/SmallHeaderChat.vue";
+import CentralTheme from "@/components/global/header/CentralTheme.vue";
 import GeneralChat from "@/components/chat/GeneralChat.vue";
 import NatureChat from "@/components/chat/NatureChat.vue";
 import MathematicChat from "@/components/chat/MathematicChat.vue";
@@ -7,6 +9,8 @@ import RedactionChat from "@/components/chat/RedactionChat.vue";
 import SubscriptionPlan from "@/views/subscriptionPlan/SubscriptionPlanView.vue";
 
 export {
+    SmallHeaderChat,
+    CentralTheme,
     GeneralChat,
     NatureChat,
     MathematicChat,
