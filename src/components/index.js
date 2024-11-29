@@ -22,8 +22,10 @@ import HistoryList from "@/components/global/header/asideHistory/HistoryList.vue
 import BtnStroke from "./global/buttons/BtnStroke.vue";
 import DefaultBtn from "./global/buttons/DefaultBtn.vue";
 import HeaderHome from "./home/HeaderHome.vue";
+import LoadComp from "./global/loadPage/LoadComp.vue";
 
 export {
+    LoadComp,
     SmallHeaderChat,
     NormalHeaderChat,
     HeaderChat,
