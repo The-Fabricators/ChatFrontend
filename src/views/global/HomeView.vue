@@ -9,7 +9,7 @@ import { HeaderHome } from '@/components';
 
         <div class="elements-container">
         <div class="eva-container">
-            <img src="@/assets/images/eva.png" alt="">
+            <img src="@/assets/images/eva.svg" alt="">
         </div>
 
         <div class="info-home-container">
