@@ -1,5 +1,3 @@
-import BtnStroke from "./globals/BtnStroke.vue";
-import HeaderHome from "./home/HeaderHome.vue";
 import GeneralChat from "@/components/chat/GeneralChat.vue";
 import NatureChat from "@/components/chat/NatureChat.vue";
 import MathematicChat from "@/components/chat/MathematicChat.vue";
