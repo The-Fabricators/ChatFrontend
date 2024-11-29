@@ -15,7 +15,13 @@ import { DefaultBtn } from '@/components/'
         <span class="mdi mdi-star"></span>Gerar exercícios para o usuário fazer
       </p>
     </div>
-    <DefaultBtn text="Comprar Plano" background="#7A1F40" color="#fff" />
+    <DefaultBtn
+      text="Comprar Plano"
+      background="#7A1F40"
+      color="#fff"
+      width="350px"
+      padding="1vw 2vw 1vw 2vw"
+    />
   </div>
 </template>
 <style scoped>
