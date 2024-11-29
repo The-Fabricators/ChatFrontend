@@ -1,4 +1,6 @@
 <script setup>
+import { shallowRef } from 'vue';
+
 
 const props = defineProps({
     text: {
@@ -35,21 +37,25 @@ const props = defineProps({
     },  
     color: {
         type: String,
-        default: 'white'
+        default: 'black'
     },  
+    color_hover: {
+        type: String,
+        default: 'white'
+    }
 })
 
 const emit = defineEmits([
-    'action', 'hover',
+    'action',
 ])
-
+const hover = shallowRef(false)
 </script>
 
 <template>
-    <div @mouseenter="emit('hover', true)"
-    @mouseleave="emit('hover', false)" class="box-button" :style="{padding: props.padding, borderRadius: props.border_radius, border: props.border, width: props.width, height: props.height, color: 'inherit'}">
+    <div @mouseenter="hover = true"
+    @mouseleave="hover = false" class="box-button" :style="{padding: props.padding, borderRadius: props.border_radius, border: props.border, width: props.width, height: props.height}">
         <span  @click="emit('action')" class="button-body">
-            <p :style="{fontSize: props.font_size, fontWeight: props.font_weight, color: props.color}" >{{ props.text }}</p>
+            <p :style="{fontSize: props.font_size, fontWeight: props.font_weight, color: hover ? props.color_hover : props.color}" >{{ props.text }}</p>
         </span>
     </div>
 </template>

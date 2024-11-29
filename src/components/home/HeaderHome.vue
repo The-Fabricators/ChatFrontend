@@ -1,7 +1,6 @@
 <script setup>
 import { computed, shallowRef } from 'vue';
 import {BtnStroke} from '@/components/index';
-const hover = shallowRef(false)
 const widthScreen = computed(()=> window.screen.width)
 </script>
 
@@ -10,7 +9,7 @@ const widthScreen = computed(()=> window.screen.width)
         <div class="img-header">
             <img src="@/assets/icons/biasLogo.svg" alt="">
         </div>
-        <BtnStroke @hover="hover = $event" :color="hover ? 'white' : 'black'" text="Entrar" padding="2px" border_radius="60px" :font_size="widthScreen < 600 ?'35px' : '17px'" :border="widthScreen < 600 ? '3px solid black' : '2px solid black'" :height="widthScreen < 600 ? '110px' : '55px'" font_weight="600" :width="widthScreen < 600 ? '300px' : '130px'" />
+        <BtnStroke text="Entrar" padding="2px" border_radius="60px" :font_size="widthScreen < 600 ?'35px' : '17px'" :border="widthScreen < 600 ? '3px solid black' : '2px solid black'" :height="widthScreen < 600 ? '110px' : '55px'" font_weight="600" :width="widthScreen < 600 ? '300px' : '130px'" />
     </section>
 </template>
 
