@@ -1,4 +1,6 @@
-<script setup></script>
+<script setup>
+import DefaultBtn from '../globals/buttons/defaultBtn.vue';
+</script>
 <template>
     <div class="subscription-container premium">
         <h1>PREMIUM</h1>
@@ -8,8 +10,8 @@
         <p><span class="mdi mdi-star"></span>IA’s com treinamento avançado</p>
         <p><span class="mdi mdi-star"></span>Responder perguntas enviadas por imagem</p>
         <p><span class="mdi mdi-star"></span>Responder perguntas enviadas por áudio</p>
-        <p><span class="mdi mdi-star"></span>Gerar exercícios para o usuário fazer</p>
-        <!-- <button>example</button> replace for component -->
+        <p class="space-last"><span class="mdi mdi-star"></span>Gerar exercícios para o usuário fazer</p>
+        <DefaultBtn text="Comprar Plano" background="#7A1F40" color="#fff" />
     </div>
 </template>
 <style scoped>

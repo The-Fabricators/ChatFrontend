@@ -1,3 +1,7 @@
 <template>
-    <h1>HOME</h1>
+  <div></div>
 </template>
+
+<script></script>
+
+<style lang="scss" scoped></style>
