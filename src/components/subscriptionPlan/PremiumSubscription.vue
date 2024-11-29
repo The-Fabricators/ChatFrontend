@@ -1,5 +1,5 @@
 <script setup>
-import DefaultBtn from '../global/buttons/defaultBtn.vue'
+import { DefaultBtn } from '@/components/'
 </script>
 <template>
   <div class="subscription-container premium">

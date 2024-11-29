@@ -1,5 +1,5 @@
 <script setup>
-import defaultBtn from '../global/buttons/defaultBtn.vue'
+import { DefaultBtn } from '@/components/'
 </script>
 <template>
   <div class="subscription-container free">
@@ -9,7 +9,6 @@ import defaultBtn from '../global/buttons/defaultBtn.vue'
       <p>Chat de Perguntas e respostas com IA’s</p>
       <p class="space-last">5 Especialistas</p>
     </div>
-    <!-- <span class="line"></span> -->
     <div class="text">
       <p><span class="mdi mdi-close"></span>Chat de Perguntas e respostas com IA’s</p>
       <p><span class="mdi mdi-close"></span>5 Especialistas</p>
