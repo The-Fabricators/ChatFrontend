@@ -1,5 +1,5 @@
 <script setup>
-import { CentralTheme, AsideIaSelector } from "@/components";
+import { CentralTheme, AsideSelectorDesktop } from "@/components";
 </script>
 
 <template>
@@ -11,7 +11,7 @@ import { CentralTheme, AsideIaSelector } from "@/components";
             <CentralTheme text="Geral" color="background-color: #DCDCDC;" />
         </div>
         <div class="container-type-themes">
-            <AsideIaSelector />
+            <AsideSelectorDesktop/>
         </div>
     </header>
 </template>
