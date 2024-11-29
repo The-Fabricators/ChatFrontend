@@ -22,9 +22,6 @@ import { HeaderHome } from '@/components';
         </div>
     </main>
 </template>
-
 <style scoped>
 @import '@/assets/sass/home/_home.scss';
 </style>
-
-

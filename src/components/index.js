@@ -1,3 +1,6 @@
+
+import SmallHeaderChat from "@/components/global/header/SmallHeaderChat.vue";
+import CentralTheme from "@/components/global/header/CentralTheme.vue";
 import GeneralChat from "@/components/chat/GeneralChat.vue";
 import NatureChat from "@/components/chat/NatureChat.vue";
 import MathematicChat from "@/components/chat/MathematicChat.vue";
@@ -8,7 +11,10 @@ import SubscriptionPlan from "@/views/subscriptionPlan/SubscriptionPlanView.vue"
 import BtnStroke from "./globals/BtnStroke.vue";
 import HeaderHome from "./home/HeaderHome.vue";
 
+
 export {
+    SmallHeaderChat,
+    CentralTheme,
     GeneralChat,
     NatureChat,
     MathematicChat,
@@ -18,4 +24,5 @@ export {
     SubscriptionPlan,
     BtnStroke,
     HeaderHome
+    SubscriptionPlan
 };
