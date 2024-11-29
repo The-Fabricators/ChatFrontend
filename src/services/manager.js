@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> f97a80f (FEAT:Create PassageID)
 import api from '@/plugins/api'
 
 /**
