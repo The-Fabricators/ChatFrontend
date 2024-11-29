@@ -1,0 +1,16 @@
+.header-container-home {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.img-header {
+    height: 56.23px;
+    width: 67px;
+
+    & img {
+        width: 100%;
+        height: 100%;
+    }
+}
