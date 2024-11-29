@@ -13,6 +13,8 @@ import  AsideSelectorMobile from "./global/header/aside/AsideMobile.vue";
 import IaTitles from "@/components/global/header/aside/titles/IaTitles.vue";
 import AsideUser from "@/components/global/header/aside/user/AsideUser.vue";
 import ButtonLogout from "@/components/global/header/aside/user/ButtonLogout.vue";
+import AsideMobile from "./global/header/aside/AsideMobile.vue";
+import AsideDesktop from "@/components/global/header/aside/AsideDesktop.vue";
 
 import AsideHistory from "@/components/global/header/AsideHistory.vue"
 import HistoryList from "@/components/global/header/asideHistory/HistoryList.vue"
@@ -36,13 +38,13 @@ export {
     IaTitles,
     AsideUser,
     ButtonLogout,
-    SubscriptionPlan,
     AsideHistory,
     HistoryList,
-    SubscriptionPlan,
     BtnStroke,
     HeaderHome,
-    DefaultBtn
+    DefaultBtn,
+    AsideMobile,
+    AsideDesktop
 };
 
 

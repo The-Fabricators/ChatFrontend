@@ -22,7 +22,7 @@ const history = {
       <div class="buttons">
         <div @click="showMenu = !showMenu">
             <!-- close aside-history -->
-          <span>X</span>
+          <img src="@/assets/images/header/closeX.png" />
         </div>
         <RouterLink to="/"><img src="@/assets/images/header/edit.png" alt=""></RouterLink> 
         <!-- Link to create a new chat -->
