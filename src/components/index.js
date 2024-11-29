@@ -8,7 +8,8 @@ import HumansChat from "@/components/chat/HumansChat.vue";
 import LanguagesChat from "@/components/chat/LanguagesChat.vue";
 import RedactionChat from "@/components/chat/RedactionChat.vue";
 import SubscriptionPlan from "@/views/subscriptionPlan/SubscriptionPlanView.vue";
-import BtnStroke from "./global/header/BtnStroke.vue";
+import BtnStroke from "./global/buttons/BtnStroke.vue";
+import DefaultBtn from "./global/buttons/DefaultBtn.vue";
 import HeaderHome from "./home/HeaderHome.vue";
 
 
@@ -24,4 +25,5 @@ export {
     SubscriptionPlan,
     BtnStroke,
     HeaderHome,
+    DefaultBtn
 };

@@ -60,5 +60,5 @@ const hover = shallowRef(false)
     </div>
 </template>
 <style scooped>
-@import '@/assets/sass/globals/_buttonStroke.scss';
+@import '@/assets/sass/global/_buttonStroke.scss';
 </style>
