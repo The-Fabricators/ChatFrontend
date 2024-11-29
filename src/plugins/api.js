@@ -1,5 +1,4 @@
 import axios from 'axios'
-import { Passage } from '@passageidentity/passage-js'
 
 const apiUrl = import.meta.env.VITE_API_URL
 
@@ -14,8 +13,9 @@ const api = axios.create({
 api.interceptors.request.use(
   async (config) => {
     if (!config.skipAuth) {
-      const jwt = localStorage.getItem('passage_jwt')
+      const jwt = localStorage.getItem('psg_auth_token')
       config.headers.Authorization = `Bearer ${jwt}`
+      console.log(jwt)
     }
     return config
   },
