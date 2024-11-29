@@ -1,9 +1,7 @@
 <template>
-  <h1 class="text">Hello World!</h1>
-  <span class="mdi mdi-account-credit-card icon"></span>
-  <RouterView />
+  <defaultBtn />
 </template>
 
-<style scoped>
-@import '@/assets/sass/_home.scss';
-</style>
+<script setup>
+import defaultBtn from './components/globals/buttons/defaultBtn.vue'
+</script>
