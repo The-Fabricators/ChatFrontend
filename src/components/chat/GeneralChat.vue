@@ -1,8 +1,11 @@
 <script setup>
+import { SmallHeaderChat } from "@/components";
 </script>
 
 <template>
-  <div>GENERAL</div>
+  <div class="container">
+    <SmallHeaderChat />
+  </div>
 </template>
 
 <style scoped>
