@@ -1,6 +1,7 @@
 <script setup>
 import { HeaderHome } from '@/components';
 </script>
+
 <template>
     <main class="main-home">
         <div class="home-container">
@@ -25,3 +26,4 @@ import { HeaderHome } from '@/components';
 <style scoped>
 @import '@/assets/sass/home/_home.scss';
 </style>
+
