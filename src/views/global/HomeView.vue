@@ -1,5 +1,5 @@
 <script setup>
-import { HeaderHome } from '@/components'
+import { HeaderHome, DefaultBtn } from '@/components'
 </script>
 
 <template>
@@ -19,6 +19,10 @@ import { HeaderHome } from '@/components'
           <h1 class="text t2"></h1>
         </div>
         <p class="text t3">an AI to help you with the ENEM and entrance exams</p>
+         <DefaultBtn style="margin-top: 20px;" text="Fazer Login" padding="2px" border_radius="60px" :font_size="widthScreen < 600 ?'35px' : '17px'" :border="widthScreen < 600 ? '3px solid black' : '2px solid black'" :height="widthScreen < 600 ? '110px' : '55px'" font_weight="600" :width="widthScreen < 600 ? '300px' : '220px'" color="white" />
+         <div class="container-down-info">
+          <p>Modo Escuro</p>
+         </div>
       </div>
     </div>
   </main>

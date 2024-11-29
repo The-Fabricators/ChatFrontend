@@ -11,7 +11,7 @@ const dark = ref(true); // Reactive variable to toggle between dark and light th
 </script>
 
 <template>
-    <div>
+    <div class="container-aside-mobile">
         <!-- Icon to toggle the aside menu visibility -->
         <div class="icon" @click="showMenu = !showMenu">
             <img src="@/assets/images/header/widget.png" alt="menu">

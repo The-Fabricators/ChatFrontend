@@ -9,6 +9,12 @@
       }
 }
 
+.container-down-info {
+ & p {
+  font-weight: 600;
+ }
+}
+
 @keyframes changeWord {
     25% {
         content: 'Educator';
