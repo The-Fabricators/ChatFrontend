@@ -3,9 +3,8 @@ import { RouterView } from "vue-router";
 </script>
 
 <template>
-  <RouterView />
+    <RouterView />
 </template>
 
 <style scoped>
-@import '@/assets/sass/_home.scss';
 </style>
