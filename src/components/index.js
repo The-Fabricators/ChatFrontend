@@ -8,10 +8,13 @@ import HelpMessage from "@/components/chat/HelpMessage.vue";
 import HelpButtons from "@/components/chat/HelpButtons.vue";
 import GeneralChat from "@/components/chat/GeneralChat.vue";
 import SubscriptionPlan from "@/views/subscriptionPlan/SubscriptionPlanView.vue";
+
+import AsideHistory from "@/components/global/header/AsideHistory.vue"
+import HistoryList from "@/components/global/header/asideHistory/HistoryList.vue"
+
 import BtnStroke from "./global/buttons/BtnStroke.vue";
 import DefaultBtn from "./global/buttons/DefaultBtn.vue";
 import HeaderHome from "./home/HeaderHome.vue";
-
 
 export {
     SmallHeaderChat,
@@ -23,7 +26,11 @@ export {
     HelpButtons,
     GeneralChat,
     SubscriptionPlan,
+    AsideHistory,
+    HistoryList,
+    SubscriptionPlan,
     BtnStroke,
     HeaderHome,
     DefaultBtn
 };
+

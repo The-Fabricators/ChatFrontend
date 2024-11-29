@@ -1,4 +1,5 @@
 <script setup>
+import { CentralTheme, AsideHistory } from "@/components";
 import { useRoute } from "vue-router";
 import { CentralTheme } from "@/components";
 import { whichText, whichColor } from "@/utils";
@@ -9,7 +10,7 @@ const route = useRoute();
 <template>
     <header>
         <div class="container-historic">
-            <img src="@/assets/images/header/three-bars.png" alt="">
+            <AsideHistory/>
         </div>
         <div class="container-theme">
             <CentralTheme :text="whichText(route)" :color="whichColor(route)" />
