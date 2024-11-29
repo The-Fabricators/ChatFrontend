@@ -22,12 +22,6 @@ export {
     HelpMessage,
     HelpButtons,
     GeneralChat,
-    SubscriptionPlan
-    NatureChat,
-    MathematicChat,
-    HumansChat,
-    LanguagesChat,
-    RedactionChat,
     SubscriptionPlan,
     BtnStroke,
     HeaderHome,
