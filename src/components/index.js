@@ -23,6 +23,5 @@ export {
     RedactionChat,
     SubscriptionPlan,
     BtnStroke,
-    HeaderHome
-    SubscriptionPlan
+    HeaderHome,
 };
