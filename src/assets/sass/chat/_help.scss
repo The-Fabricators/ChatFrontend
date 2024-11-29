@@ -1,0 +1,24 @@
+.container-help {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 25px;
+
+    .title {
+        font-size: 1.5rem;
+    }
+    .container-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container-help {
+        .title {
+            font-size: 2.2rem;
+        }
+    }
+}

@@ -1,12 +1,15 @@
 <script setup>
-import { SmallHeaderChat } from "@/components";
+import { HeaderChat, InputChat, HelpMessage } from "@/components";
 </script>
 
 <template>
   <div class="container">
-    <SmallHeaderChat />
+    <HeaderChat />
+    <HelpMessage />
+    <InputChat />
   </div>
 </template>
 
 <style scoped>
+@import '@/assets/sass/chat/_chat.scss';
 </style>

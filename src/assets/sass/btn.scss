@@ -1,0 +1,20 @@
+.container {
+  display: flex; /* Flexbox para centralização */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+span {
+  transition: all 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+a {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) and (min-device-witdh: 768px) {
+  .container {
+    flex-direction: column; /* Flexbox para centralização */
+  }
+}

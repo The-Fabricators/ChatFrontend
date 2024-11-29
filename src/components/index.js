@@ -1,25 +1,36 @@
+
 import SmallHeaderChat from "@/components/global/header/SmallHeaderChat.vue";
+import NormalHeaderChat from "@/components/global/header/NormalHeaderChat.vue";
+import HeaderChat from "@/components/global/header/HeaderChat.vue";
 import CentralTheme from "@/components/global/header/CentralTheme.vue";
+import InputChat from "@/components/chat/InputChat.vue";
+import HelpMessage from "@/components/chat/HelpMessage.vue";
+import HelpButtons from "@/components/chat/HelpButtons.vue";
 import GeneralChat from "@/components/chat/GeneralChat.vue";
-import NatureChat from "@/components/chat/NatureChat.vue";
-import MathematicChat from "@/components/chat/MathematicChat.vue";
-import HumansChat from "@/components/chat/HumansChat.vue";
-import LanguagesChat from "@/components/chat/LanguagesChat.vue";
-import RedactionChat from "@/components/chat/RedactionChat.vue";
 import SubscriptionPlan from "@/views/subscriptionPlan/SubscriptionPlanView.vue";
+
 import AsideHistory from "@/components/global/header/AsideHistory.vue"
 import HistoryList from "@/components/global/header/asideHistory/HistoryList.vue"
 
+import BtnStroke from "./global/buttons/BtnStroke.vue";
+import DefaultBtn from "./global/buttons/DefaultBtn.vue";
+import HeaderHome from "./home/HeaderHome.vue";
+
 export {
     SmallHeaderChat,
+    NormalHeaderChat,
+    HeaderChat,
     CentralTheme,
+    InputChat,
+    HelpMessage,
+    HelpButtons,
     GeneralChat,
-    NatureChat,
-    MathematicChat,
-    HumansChat,
-    LanguagesChat,
-    RedactionChat,
     SubscriptionPlan,
     AsideHistory,
-    HistoryList
+    HistoryList,
+    SubscriptionPlan,
+    BtnStroke,
+    HeaderHome,
+    DefaultBtn
 };
+
