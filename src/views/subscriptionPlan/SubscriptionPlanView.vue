@@ -1,9 +1,7 @@
 <script setup>
-import FreeSubscription from '@/components/subscriptionPlan/FreeSubscription.vue';
-import PremiumSubscription from '@/components/subscriptionPlan/PremiumSubscription.vue';
+import SubscriptionComp from '@/components/subscriptionPlan/SubscriptionComp.vue';
 </script>
 <template>
-    <FreeSubscription />
-    <PremiumSubscription />
+    <SubscriptionComp />
     <!-- <h1>HOME</h1> -->
 </template>
