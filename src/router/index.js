@@ -50,11 +50,6 @@ const router = createRouter({
       path: '/subscription-plan',
       name: 'subscriptionPlan',
       component: () => import('@/views/subscriptionPlan/SubscriptionPlanView.vue')
-    },
-    {
-      path: '/dark',
-      name: 'dark',
-      component: () => import('@/views/DarkView.vue')
     }
   ],
 });
