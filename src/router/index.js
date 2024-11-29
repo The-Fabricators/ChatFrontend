@@ -22,34 +22,34 @@ const router = createRouter({
         {
           path: 'nature',
           name: 'nature',
-          component: GeneralChat,
+          component: NatureChat,
         },
         {
           path: 'math',
           name: 'mathematic',
-          component: GeneralChat,
+          component: MathematicChat,
         },
         {
           path: 'humans',
           name: 'humans',
-          component: GeneralChat,
+          component: HumansChat,
         },
         {
           path: 'languages',
           name: 'languages',
-          component: GeneralChat,
+          component: LanguagesChat,
         },
         {
           path: 'Redaction',
           name: 'Redaction',
-          component: GeneralChat,
+          component: RedactionChat,
         },
       ],
     },
     {
       path: '/login',
       name: 'login',
-      component: () => import('@/views/login/Login.vue')
+      component: () => import('@/views/login/Login.vue'),
     },
     {
       path: '/subscription-plan',
@@ -60,7 +60,7 @@ const router = createRouter({
       path: '/payment',
       name: 'payment',
       component: () => import('@/views/global/PaymentView.vue'),
-    }
+    },
   ],
 })
 

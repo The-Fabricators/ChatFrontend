@@ -1,4 +1,5 @@
 import axios from 'axios'
+import { Passage } from '@passageidentity/passage-js'
 
 const apiUrl = import.meta.env.VITE_API_URL
 

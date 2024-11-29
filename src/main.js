@@ -1,5 +1,6 @@
 import './assets/imports.css'
 import './assets/sass/_main.scss'
+
 // import { setupInterceptors } from '@/plugins/axios'
 import { createApp } from 'vue'
 // import { createPinia } from 'pinia'
