@@ -1,4 +1,5 @@
 <script setup>
+<<<<<<< HEAD
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { whichColor, whichColorAndWidth, whichLogoResponseAi } from '@/utils';
@@ -10,6 +11,12 @@ onMounted(() => {
     colors.value = whichColor(route);
     console.log(colors.value); 
 })
+=======
+import { useRoute } from 'vue-router';
+import { whichColor } from '@/utils';
+
+const route = useRoute();
+>>>>>>> 24182d0 (FEAT: Create area messages #43)
 </script>
 
 <template>
@@ -17,6 +24,7 @@ onMounted(() => {
     <div class="container-day-messages">
         <h2 class="day">29 de Novembro</h2>
         <div class="container-messages">
+<<<<<<< HEAD
             <div class="container-father-my-message">
                 <div class="container-my-message" :style="colors.user">
                     <p>Artigos científicos sobre redação</p>
@@ -43,6 +51,10 @@ onMounted(() => {
                         </ul>
                     </div>
                 </div> -->
+=======
+            <div class="container-my-message" :style="whichColor(route)">
+                <p>Artigos científicos sobre redação</p>
+>>>>>>> 24182d0 (FEAT: Create area messages #43)
             </div>
         </div>
     </div>

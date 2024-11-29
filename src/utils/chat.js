@@ -7,7 +7,11 @@ export const whichColorAndWidth = (route) => {
 };
 
 export const whichColor = (route) => {
+<<<<<<< HEAD
     return (route.path == '/chat/') ? {user: 'background-color: #DCDCDC; color: #000;', aiTyping: 'background-color: rgba(220, 220, 220, 0.5); color: #000;'} : (route.path == '/chat/redaction/') ? {user: 'background-color: #B89E35; color: #FDFDFD;', aiTyping: 'background-color: rgba(184, 158, 53, 0.5); color: #FDFDFD;'} : (route.path == '/chat/math/') ? {user: 'background-color: #7A1F40; color: #FDFDFD;', aiTyping: 'background-color: rgba(122, 31, 64, 0.5); color: #FDFDFD;'} : (route.path == '/chat/humans/') ? {user: 'background-color: #343275; color: #FDFDFD', aiTyping: 'background-color: rgba(52, 50, 117, 0.5); color: #FDFDFD;'} : (route.path == '/chat/nature/') ? {user: 'background-color: #1D6828; color: #FDFDFD;', aiTyping: 'background-color: rgba(29, 104, 40, 0.5); color: #FDFDFD;'} : (route.path == '/chat/languages/') ? {user: 'background-color: #A32287; color: #FDFDFD;', aiTyping: 'background-color: rgba(163, 34, 135, 0.5); color: #FDFDFD;'} : {user: 'background-color: #DCDCDC; color: #000;', aiTyping: 'background-color: rgba(220, 220, 220, 0.5); color: #000;'};
+=======
+    return (route.path == '/chat/') ? 'background-color: #DCDCDC; color: #000;' : (route.path == '/chat/redaction/') ? 'background-color: #B89E35; color: #FDFDFD;' : (route.path == '/chat/math/') ? 'background-color: #7A1F40; color: #FDFDFD;' : (route.path == '/chat/humans/') ? 'background-color: #343275; color: #FDFDFD' : (route.path == '/chat/nature/') ? 'background-color: #1D6828; color: #FDFDFD;' : (route.path == '/chat/languages/') ? 'background-color: #A32287; color: #FDFDFD;' : 'background-color: #DCDCDC; color: #000;'
+>>>>>>> 24182d0 (FEAT: Create area messages #43)
 }
 
 export const createUrl = (path) => {
