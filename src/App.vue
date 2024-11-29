@@ -6,7 +6,3 @@ import { RouterView } from "vue-router";
   <RouterView />
 </template>
 
-<style scoped>
-@import '@/assets/sass/_home.scss';
-</style>
-
