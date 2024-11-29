@@ -1,5 +1,5 @@
 <script setup>
-import { CentralTheme } from "@/components";
+import { CentralTheme, AsideIaSelector } from "@/components";
 </script>
 
 <template>
@@ -11,7 +11,7 @@ import { CentralTheme } from "@/components";
             <CentralTheme text="Geral" color="background-color: #DCDCDC;" />
         </div>
         <div class="container-type-themes">
-            <img src="@/assets/images/header/widget.png" alt="">
+            <AsideIaSelector />
         </div>
     </header>
 </template>

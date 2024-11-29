@@ -7,6 +7,7 @@ import HumansChat from "@/components/chat/HumansChat.vue";
 import LanguagesChat from "@/components/chat/LanguagesChat.vue";
 import RedactionChat from "@/components/chat/RedactionChat.vue";
 import SubscriptionPlan from "@/views/subscriptionPlan/SubscriptionPlanView.vue";
+import AsideIaSelector from "@/components/global/header/AsideIaSelector.vue"
 
 export {
     SmallHeaderChat,
@@ -17,5 +18,6 @@ export {
     HumansChat,
     LanguagesChat,
     RedactionChat,
-    SubscriptionPlan
+    SubscriptionPlan,
+    AsideIaSelector
 };
