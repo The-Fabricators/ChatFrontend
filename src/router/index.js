@@ -1,5 +1,12 @@
-import { createRouter, createWebHistory } from 'vue-router';
-import { GeneralChat, NatureChat, MathematicChat, HumansChat, LanguagesChat, RedactionChat } from '@/components';
+import { createRouter, createWebHistory } from 'vue-router'
+import {
+  GeneralChat,
+  NatureChat,
+  MathematicChat,
+  HumansChat,
+  LanguagesChat,
+  RedactionChat,
+} from '@/components'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -17,41 +24,46 @@ const router = createRouter({
         {
           path: '',
           name: 'general',
-          component: GeneralChat
+          component: GeneralChat,
         },
         {
           path: 'nature',
           name: 'nature',
-          component: NatureChat
+          component: NatureChat,
         },
         {
           path: 'math',
           name: 'mathematic',
-          component: MathematicChat
+          component: MathematicChat,
         },
         {
           path: 'humans',
           name: 'humans',
-          component: HumansChat
+          component: HumansChat,
         },
         {
           path: 'languages',
           name: 'languages',
-          component: LanguagesChat
+          component: LanguagesChat,
         },
         {
           path: 'Redaction',
           name: 'Redaction',
-          component: RedactionChat
-        }
-      ]
+          component: RedactionChat,
+        },
+      ],
     },
     {
       path: '/subscription-plan',
       name: 'subscriptionPlan',
-      component: () => import('@/views/subscriptionPlan/SubscriptionPlanView.vue')
-    }
+      component: () => import('@/views/subscriptionPlan/SubscriptionPlanView.vue'),
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('@/views/login/Login.vue'),
+    },
   ],
-});
+})
 
-export default router;
+export default router
