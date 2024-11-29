@@ -1,9 +1,7 @@
 <script setup>
+import SubscriptionComp from '@/components/subscriptionPlan/SubscriptionComp.vue';
 </script>
-
 <template>
-  <div>Subscription Plan</div>
+    <SubscriptionComp />
+    <!-- <h1>HOME</h1> -->
 </template>
-
-<style scoped>
-</style>

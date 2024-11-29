@@ -1,0 +1,19 @@
+.container-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #000;
+    padding: 6px 12px;
+    border-radius: 15px;
+    column-gap: 5px;
+
+    img {
+        position: relative;
+        width: 16px;
+        bottom: 0px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+}
