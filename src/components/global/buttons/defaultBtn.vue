@@ -11,6 +11,7 @@
           color: hover ? props.colorHover : props.color,
           width: props.width,
           height: props.height,
+          cursor: props.cursor,
         }"
       >
         {{ props.text }}
@@ -70,6 +71,10 @@ const props = defineProps({
   backgroundHover: {
     type: String,
     default: 'white',
+  },
+  cursor: {
+    type: String,
+    default: 'pointer',
   },
 })
 </script>
