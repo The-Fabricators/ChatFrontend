@@ -1,5 +1,9 @@
 import { showExample } from "./exampleFunction";
+import { whichText, whichColor, createUrl } from "@/utils/chat";
 
 export {
-    showExample
-}
+    showExample,
+    whichText,
+    whichColor,
+    createUrl
+};
