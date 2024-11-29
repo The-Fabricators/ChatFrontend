@@ -1,9 +1,10 @@
 import { showExample } from "./exampleFunction";
-import { whichText, whichColor, createUrl } from "@/utils/chat";
+import { whichText, whichColorAndWidth, whichColor,createUrl } from "@/utils/chat";
 
 export {
     showExample,
     whichText,
+    whichColorAndWidth,
     whichColor,
     createUrl
 };

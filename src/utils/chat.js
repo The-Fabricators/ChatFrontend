@@ -2,9 +2,13 @@ export const whichText = (route) => {
     return (route.path == '/chat/') ? 'Geral' : (route.path == '/chat/redaction/') ? 'Redação' : (route.path == '/chat/math/') ? 'Matemática' : (route.path == '/chat/humans/') ? 'Ciências Humanas' : (route.path == '/chat/nature/') ? 'Ciências Naturais' : (route.path == '/chat/languages/') ? 'Linguagens' : 'Planos Mensais'
 };
 
-export const whichColor = (route) => {
-    return (route.path == '/chat/') ? 'background-color: #DCDCDC; color: #000;' : (route.path == '/chat/redaction/') ? 'background-color: #B89E35; color: #FDFDFD;' : (route.path == '/chat/math/') ? 'background-color: #7A1F40; color: #FDFDFD;' : (route.path == '/chat/humans/') ? 'background-color: #343275; color: #FDFDFD; width: 165px;' : (route.path == '/chat/nature/') ? 'background-color: #1D6828; color: #FDFDFD; width: 165px;' : (route.path == '/chat/languages/') ? 'background-color: #A32287; color: #FDFDFD;' : 'background-color: #DCDCDC; color: #000; width: 165px;'
+export const whichColorAndWidth = (route) => {
+    return (route.path == '/chat/') ? 'background-color: #DCDCDC; color: #000;' : (route.path == '/chat/redaction/') ? 'background-color: #B89E35; color: #FDFDFD;' : (route.path == '/chat/math/') ? 'background-color: #7A1F40; color: #FDFDFD;' : (route.path == '/chat/humans/') ? 'background-color: #343275; color: #FDFDFD;' : (route.path == '/chat/nature/') ? 'background-color: #1D6828; color: #FDFDFD;' : (route.path == '/chat/languages/') ? 'background-color: #A32287; color: #FDFDFD;' : 'background-color: #DCDCDC; color: #000;'
 };
+
+export const whichColor = (route) => {
+    return (route.path == '/chat/') ? 'background-color: #DCDCDC; color: #000;' : (route.path == '/chat/redaction/') ? 'background-color: #B89E35; color: #FDFDFD;' : (route.path == '/chat/math/') ? 'background-color: #7A1F40; color: #FDFDFD;' : (route.path == '/chat/humans/') ? 'background-color: #343275; color: #FDFDFD' : (route.path == '/chat/nature/') ? 'background-color: #1D6828; color: #FDFDFD;' : (route.path == '/chat/languages/') ? 'background-color: #A32287; color: #FDFDFD;' : 'background-color: #DCDCDC; color: #000;'
+}
 
 export const createUrl = (path) => {
     const url = new URL(path.replace('@', '/src'), import.meta.url).href;

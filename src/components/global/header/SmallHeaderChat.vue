@@ -1,7 +1,7 @@
 <script setup>
 import { useRoute } from "vue-router";
 import { CentralTheme } from "@/components";
-import { whichText, whichColor } from "@/utils";
+import { whichText, whichColorAndWidth } from "@/utils";
 
 const route = useRoute();
 </script>
@@ -12,7 +12,7 @@ const route = useRoute();
             <img src="@/assets/images/header/three-bars.png" alt="">
         </div>
         <div class="container-theme">
-            <CentralTheme :text="whichText(route)" :color="whichColor(route)" />
+            <CentralTheme :text="whichText(route)" :color="whichColorAndWidth(route)" />
         </div>
         <div class="container-type-themes">
             <img src="@/assets/images/header/widget.png" alt="">

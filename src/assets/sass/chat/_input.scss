@@ -116,6 +116,18 @@ form {
     }
 }
 
+@media (min-width: 1300px) {
+    .container-form {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        left: 10px;
+    }
+    .input-prompt {
+        width: 750px;
+    }
+}
+
 @media (min-width: 1440px) {
     .input-prompt {
         width: 800px;
