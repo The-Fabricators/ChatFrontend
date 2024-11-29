@@ -19,20 +19,31 @@ class ExampleService {
     }
   }
 
+  // Example With Authenticated Request
+  async getAuthenticatedData() {
+    try {
+      const { data } = await api.get(`/example-url`, { skipAuth: true })
+      return data.results
+    } catch (error) {
+      console.log('error in getData', error)
+      throw error
+    }
+  }
+
   /**
    * Retrieves all data.
    * @returns {Promise<Array>} A promise that resolves to an array of data filtered by something.
    * @throws {Error} If an error occurs while retrieving the data.
    */
-    async getDataBySomething(something, page) {
-      try {
-        const { data } = await api.get(`/example-url/?page=${page}&something_id=${something}`)
-        return data.results
-      } catch (error) {
-        console.log('error in getDataBySomething', error)
-        throw error
-      }
+  async getDataBySomething(something, page) {
+    try {
+      const { data } = await api.get(`/example-url/?page=${page}&something_id=${something}`)
+      return data.results
+    } catch (error) {
+      console.log('error in getDataBySomething', error)
+      throw error
     }
+  }
 
   /**
    * Creates a new Data.
@@ -40,7 +51,7 @@ class ExampleService {
    * @returns {Promise<Object>} A promise that resolves to the created data object.
    * @throws {Error} If an error occurs while creating the data.
    */
-  
+
   async createData(newData) {
     try {
       const { data } = await api.post(`/example-url/`, newData)
