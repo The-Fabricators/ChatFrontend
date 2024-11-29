@@ -2,7 +2,6 @@
 
 import { CentralTheme, AsideSelectorDesktop, AsideHistory } from "@/components";
 import { useRoute } from "vue-router";
-import { CentralTheme } from "@/components";
 import { whichText, whichColor } from "@/utils";
 
 const route = useRoute();
