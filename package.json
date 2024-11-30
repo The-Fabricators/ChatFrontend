@@ -13,7 +13,8 @@
   },
   "dependencies": {
     "@mdi/font": "^7.4.47",
-    "@passageidentity/passage-elements": "^2.0.6",
+    "@passageidentity/passage-auth": "^0.1.0-beta.28",
+    "@passageidentity/passage-elements": "^1.23.1",
     "@vueuse/core": "^12.0.0",
     "axios": "^1.7.8",
     "pinia": "^2.2.6",
