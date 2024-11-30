@@ -9,5 +9,5 @@ import PremiumSubscription from './PremiumSubscription.vue'
   </section>
 </template>
 <style scoped>
-@use '@/assets/sass/_subscription.scss';
+@import '@/assets/sass/_subscription.scss';
 </style>

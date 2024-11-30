@@ -12,7 +12,7 @@
           width: props.width,
           height: props.height,
           cursor: props.cursor,
-          border: hover ? props.borderHover : props.border
+          border: hover ? props.borderHover : props.border,
         }"
       >
         {{ props.text }}
@@ -84,10 +84,10 @@ const props = defineProps({
   border: {
     type: String,
     default: '2px solid black',
-  }
+  },
 })
 </script>
 
 <style scoped>
-@use '@/assets/sass/btn.scss';
+@import '@/assets/sass/btn.scss';
 </style>
