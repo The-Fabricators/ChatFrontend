@@ -19,6 +19,7 @@ export const useDarkMode = defineStore('theme', {
       } else {
         root.classList.remove('dark-mode');
       }
+      return this.isDarkMode;
     },
   },
 });
