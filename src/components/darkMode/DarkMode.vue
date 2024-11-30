@@ -90,6 +90,10 @@ body {
     height: 0;
 }
 
+.sun, .moon {
+    cursor: pointer;
+}
+
 .sun svg {
     position: absolute;
     top: 6px;

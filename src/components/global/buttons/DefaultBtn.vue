@@ -1,6 +1,6 @@
 <template>
   <router-link :to="props.to">
-    <div @mouseenter="hover = true" @mouseleave="hover = false" class="container">
+    <div @click="authStore.isAuthenticating = true" @mouseenter="hover = true" @mouseleave="hover = false" class="container">
       <span
         :style="{
           text: props.text,
@@ -23,9 +23,11 @@
 </template>
 
 <script setup>
-import { shallowRef } from 'vue'
+import { shallowRef } from 'vue';
+import { useAuthStore } from '@/stores/auth';
 
-const hover = shallowRef(false)
+const hover = shallowRef(false);
+const authStore = useAuthStore();
 
 const props = defineProps({
   text: {

@@ -5,6 +5,7 @@ import AuthService from '@/services/auth'
 import router from '@/router'
 
 export const useAuthStore = defineStore('auth', () => {
+  const isAuthenticating = ref(false);
   const state = useStorage('user', {
     user: {},
     isLogged: false,
@@ -25,8 +26,8 @@ export const useAuthStore = defineStore('auth', () => {
       console.log(data)
       state.value.user = data
       state.value.isLogged = true
-      state.value.type = data.type
       state.value.isLoading = false
+      router.push('/chat/');
     }
   }
   function unsetToken() {
@@ -53,7 +54,7 @@ export const useAuthStore = defineStore('auth', () => {
 
       localStorage.clear()
 
-      await router.push('/login')
+      await router.push('/')
     } catch (error) {
       console.error('Erro durante o logout:', error)
       state.value.error = true
@@ -63,6 +64,7 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   return {
+    isAuthenticating,
     setToken,
     unsetToken,
     logout,
