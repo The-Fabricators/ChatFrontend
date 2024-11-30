@@ -1,4 +1,6 @@
 <script setup>
+import { useAuthStore } from '@/stores/auth'
+const authStore = useAuthStore()
 defineProps({
   open: Boolean, // Accepts a boolean to control the display state (open or closed).
 })
@@ -14,7 +16,7 @@ defineProps({
     />
 
     <!-- Displays the email only if 'open' is true -->
-    <span v-if="open">vinicius@gmail.com</span>
+    <span v-if="open"><FaUserLarge />{{ authStore.state.user.email }}</span>
   </div>
 </template>
 

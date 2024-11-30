@@ -10,13 +10,11 @@ import { DefaultBtn } from '@/components/'
       <p class="space-last">5 Especialistas</p>
     </div>
     <div class="text">
-      <p><span class="mdi mdi-close"></span>Chat de Perguntas e respostas com IA’s</p>
-      <p><span class="mdi mdi-close"></span>5 Especialistas</p>
       <p><span class="mdi mdi-close"></span>IA’s com treinamento avançado</p>
       <p><span class="mdi mdi-close"></span>Responder perguntas enviadas por imagem</p>
       <p><span class="mdi mdi-close"></span>Responder perguntas enviadas por áudio</p>
       <p class="space-last">
-        <span class="mdi mdi-close"></span>Gerar exercícios para o usuário fazer
+        <span class="mdi mdi-close"></span>Gerar exercícios para o usuário realizar
       </p>
     </div>
     <DefaultBtn
