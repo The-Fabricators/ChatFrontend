@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import { GeneralChat } from '@/components'
+import { useAuthStore } from '@/stores/auth'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -18,26 +19,41 @@ const router = createRouter({
           path: '',
           name: 'general',
           component: GeneralChat,
+          meta: {
+            isAuth: true,
+          },
         },
         {
           path: 'nature',
           name: 'nature',
           component: GeneralChat,
+          meta: {
+            isAuth: true,
+          },
         },
         {
           path: 'math',
           name: 'mathematic',
           component: GeneralChat,
+          meta: {
+            isAuth: true,
+          },
         },
         {
           path: 'humans',
           name: 'humans',
           component: GeneralChat,
+          meta: {
+            isAuth: true,
+          },
         },
         {
           path: 'languages',
           name: 'languages',
           component: GeneralChat,
+          meta: {
+            isAuth: true,
+          },
         },
         {
           path: 'redaction',
@@ -49,7 +65,7 @@ const router = createRouter({
     {
       path: '/login',
       name: 'login',
-      component: () => import('@/views/login/Login.vue')
+      component: () => import('@/views/login/Login.vue'),
     },
     {
       path: '/subscription-plan',
@@ -60,8 +76,20 @@ const router = createRouter({
       path: '/payment',
       name: 'payment',
       component: () => import('@/views/global/PaymentView.vue'),
-    }
+      meta: {
+        isAuth: true,
+      },
+    },
   ],
+})
+
+router.beforeEach((to, from, next) => {
+  const authStore = useAuthStore()
+  if (to.meta.isAuth && !authStore.state.isLogged) {
+    next('/login')
+  } else {
+    next()
+  }
 })
 
 export default router
