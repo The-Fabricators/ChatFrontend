@@ -17,7 +17,7 @@ const router = createRouter({
       children: [
         {
           path: '',
-          name: 'general',
+          name: 'genericAI',
           component: GeneralChat,
           meta: {
             isAuth: true,
@@ -25,7 +25,7 @@ const router = createRouter({
         },
         {
           path: 'nature',
-          name: 'nature',
+          name: 'naturalscienceAI',
           component: GeneralChat,
           meta: {
             isAuth: true,
@@ -33,7 +33,7 @@ const router = createRouter({
         },
         {
           path: 'math',
-          name: 'mathematic',
+          name: 'mathAI',
           component: GeneralChat,
           meta: {
             isAuth: true,
@@ -41,7 +41,7 @@ const router = createRouter({
         },
         {
           path: 'humans',
-          name: 'humans',
+          name: 'humanscienceAI',
           component: GeneralChat,
           meta: {
             isAuth: true,
@@ -49,7 +49,7 @@ const router = createRouter({
         },
         {
           path: 'languages',
-          name: 'languages',
+          name: 'languageAI',
           component: GeneralChat,
           meta: {
             isAuth: true,
@@ -57,7 +57,7 @@ const router = createRouter({
         },
         {
           path: 'redaction',
-          name: 'redaction',
+          name: 'textwritingAI',
           component: GeneralChat,
         },
       ],
