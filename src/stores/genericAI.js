@@ -1,9 +1,9 @@
 import { defineStore } from 'pinia'
-import { computed, reactive } from 'vue'
+import { reactive } from 'vue'
 import { GenericAIService } from '@/services/index'
 // import { useStorage } from '@vueuse/core'
 
-export const useGenericAIStore = defineStore('example', () => {
+export const useGenericAIStore = defineStore('genericAI', () => {
   const state = reactive({
     currentResponse: null,
     error: null,

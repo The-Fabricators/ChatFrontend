@@ -2,9 +2,11 @@
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
 import { useStaticDetailsStore } from "@/stores/staticDetails";
+import { useAuthStore } from '@/stores/auth';
 
 const staticDetailsStore = useStaticDetailsStore();
 
+const authStore = useAuthStore();
 const route = useRoute();
 const colors = ref({});
 
@@ -19,7 +21,10 @@ onMounted(() => {
     <div class="container-day-messages">
         <h2 class="day">29 de Novembro</h2>
         <div class="container-messages">
-            <div class="container-father-my-message">
+            <div class="hello-user">
+                <h2>Olá, {{ authStore.state.user.email.split('@')[0] }} </h2>
+            </div>
+            <!-- <div class="container-father-my-message">
                 <div class="container-my-message" :style="colors.user">
                     <p>Artigos científicos sobre redação</p>
                 </div>
@@ -27,7 +32,7 @@ onMounted(() => {
             <div class="container-father-ai-message">
                 <div class="container-ai-typing" :style="colors.aiTyping">
                     <p>...</p>
-                </div>
+                </div> -->
                 <!-- <div class="container-ai-message">
                     <img :src="staticDetailsStore.whichLogoResponseAi" alt="">
                     <div class="ai-message">
@@ -45,7 +50,7 @@ onMounted(() => {
                         </ul>
                     </div>
                 </div> -->
-            </div>
+            <!-- </div> -->
         </div>
     </div>
   </div>
