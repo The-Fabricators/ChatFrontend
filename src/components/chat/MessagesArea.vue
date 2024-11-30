@@ -1,13 +1,15 @@
 <script setup>
 import { ref, onMounted } from 'vue';
 import { useRoute } from 'vue-router';
-import { whichColor, whichColorAndWidth, whichLogoResponseAi } from '@/utils';
+import { useStaticDetailsStore } from "@/stores/staticDetails";
+
+const staticDetailsStore = useStaticDetailsStore();
 
 const route = useRoute();
 const colors = ref({});
 
 onMounted(() => {
-    colors.value = whichColor(route);
+    colors.value = staticDetailsStore.whichColor;
     console.log(colors.value); 
 })
 </script>
@@ -27,7 +29,7 @@ onMounted(() => {
                     <p>...</p>
                 </div>
                 <!-- <div class="container-ai-message">
-                    <img :src="whichLogoResponseAi(route)" alt="">
+                    <img :src="staticDetailsStore.whichLogoResponseAi" alt="">
                     <div class="ai-message">
                         <p>Artigos científicos sobre redação são bastante diversos, pois podem abordar temas como técnicas de escrita, redação acadêmica, criatividade na escrita, processos de revisão, entre outros. Para te ajudar, vou sugerir alguns temas e formas de buscar artigos:
                         <strong>Principais temas relacionados à redação: </strong>
