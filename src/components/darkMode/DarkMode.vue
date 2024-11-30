@@ -62,11 +62,13 @@ const isDarkMode = ref(themeStore.isDarkMode);
 :root {
     --bg-color: #ffffff;
     --text-color: #000000;
+    --aside-background: #ECECEC;
 }
 
 .dark-mode {
     --bg-color: #121212;
     --text-color: #ffffff;
+    --aside-background: #303030;
 }
 
 body {
@@ -79,7 +81,6 @@ body {
     font-size: 17px;
     position: relative;
     display: flex;
-    // width: 64px;
     height: 34px;
 }
 
@@ -111,7 +112,11 @@ body {
 .sun svg {
     animation: rotate 15s linear infinite;
 }
-
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 @keyframes rotate {
     0% {
         transform: rotate(0);

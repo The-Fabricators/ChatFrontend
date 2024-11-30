@@ -1,6 +1,7 @@
 <script setup>
 import { ref } from "vue";  
 import { useTemplateStore } from "@/stores/template/template"; 
+import DarkMode from "@/components/darkMode/DarkMode.vue";
 import { IaTitles, AsideUser, ButtonLogout } from "@/components"; 
 
 const templateStore = useTemplateStore(); // Reactive variable to access titles from the template store.
@@ -59,6 +60,7 @@ const dark = ref(true); // Reactive variable to toggle between dark and light th
 
                 <!-- ButtonLogout component with 'open' and 'dark' props to control appearance and theme -->
                 <ButtonLogout :open="open" :dark="dark" />
+                <div class="align-dark" :class="{'align-middle': !open, 'align-end': open}"><DarkMode /></div>
             </div>
         </div>
 </template>
