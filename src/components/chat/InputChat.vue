@@ -1,11 +1,15 @@
 <script setup>
 import { reactive, ref } from 'vue'
 import { useGenericAIStore } from '@/stores'
+import { useRoute } from 'vue-router';
+
+const route = useRoute()
 
 const genericAIStore = useGenericAIStore()
 const message = ref('')
 const post = reactive({
   input_text: message,
+  chat_name: route.params.id
 })
 </script>
 

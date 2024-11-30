@@ -27,7 +27,6 @@ export const useAuthStore = defineStore('auth', () => {
       state.value.user = data
       state.value.isLogged = true
       state.value.isLoading = false
-      router.push('/chat/');
     }
   }
   function unsetToken() {

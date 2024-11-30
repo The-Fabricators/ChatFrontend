@@ -1,11 +1,9 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useStaticDetailsStore } from '@/stores/staticDetails'
-import { useRoute } from 'vue-router'
 import { HelpButtons } from '@/components'
 
 const staticDetailsStore = useStaticDetailsStore()
-const route = useRoute()
 const propsContent = ref([])
 
 onMounted(() => {

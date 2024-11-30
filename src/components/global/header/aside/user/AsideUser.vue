@@ -16,7 +16,7 @@ defineProps({
     />
 
     <!-- Displays the email only if 'open' is true -->
-    <span v-if="open"><FaUserLarge />{{ authStore.state.user.email }}</span>
+    <span v-if="open">{{ authStore.state.user.email }}</span>
   </div>
 </template>
 

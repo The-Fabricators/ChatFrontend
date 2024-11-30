@@ -37,7 +37,7 @@ const toggleTheme = () => {
         <span class="moon" v-else>
           <img src="@/assets/images/darkMode/sol.svg" alt="" />
         </span>
-        <input type="checkbox" class="input" :checked="isDarkMode" @change="toggleTheme" />
+        <input type="checkbox" class="input" :checked="themeStore.isDarkMode" @change="toggleTheme" />
       </label>
     </div>
   </div>

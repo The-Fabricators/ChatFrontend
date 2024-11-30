@@ -1,52 +1,66 @@
 <script setup>
-import { ref, onMounted } from 'vue'
-import { useRoute } from 'vue-router'
+import { ref, onMounted, onUpdated } from 'vue'
 import { useStaticDetailsStore } from '@/stores/staticDetails'
+import { useChatStore } from '@/stores/chat'
+import { useAnswersStore } from '@/stores/answers'
+import { useGenericAIStore } from '@/stores'
 
+import router from '@/router'
 const staticDetailsStore = useStaticDetailsStore()
+const chatStore = useChatStore()
+const answerStore = useAnswersStore()
+const genericAIStore = useGenericAIStore()
 
-const route = useRoute()
+const chatId = router.currentRoute.value.params?.id
+
 const colors = ref({})
 
-onMounted(() => {
+console.log(chatId)
+
+onMounted(async () => {
   colors.value = staticDetailsStore.whichColor
   console.log(colors.value)
+  await chatStore.getChatById(chatId)
+  await answerStore.GetAnswers(chatId)
+  console.log(answerStore.answers)
 })
 </script>
 
 <template>
+  <h2 class="day">29 de Novembro</h2>
   <div class="container-father-messages">
     <div class="container-day-messages">
-      <h2 class="day">29 de Novembro</h2>
-      <div class="container-messages">
+      <div v-for="message in answerStore.answers" :key="message.id" class="container-messages">
         <div class="container-father-my-message">
           <div class="container-my-message" :style="colors.user">
-            <p>Artigos científicos sobre redação</p>
+            <p>{{ message.answer }}</p>
           </div>
         </div>
         <div class="container-father-ai-message">
-          <div class="container-ai-typing" :style="colors.aiTyping">
-            <p>...</p>
+          <div class="container-ai-message">
+            <img :src="staticDetailsStore.whichLogoResponseAi" alt="" />
+            <div class="ai-message">
+              {{ message.response }}
+            </div>
           </div>
-          <!-- <div class="container-ai-message">
-                    <img :src="staticDetailsStore.whichLogoResponseAi" alt="">
-                    <div class="ai-message">
-                        <p>Artigos científicos sobre redação são bastante diversos, pois podem abordar temas como técnicas de escrita, redação acadêmica, criatividade na escrita, processos de revisão, entre outros. Para te ajudar, vou sugerir alguns temas e formas de buscar artigos:
-                        <strong>Principais temas relacionados à redação: </strong>
-                        </p>
-                        <ol>
-                            <li>Redação acadêmica:
-                            </li>
-                        </ol>
-                        <ul>
-                            <li>Técnicas de escrita científica.</li>
-                            <li>Estruturação de textos (introdução, desenvolvimento, conclusão)</li>
-                            <li>Normas e padronizações (ex.: ABNT, APA).</li>
-                        </ul>
-                    </div>
-                </div> -->
         </div>
       </div>
+      <!-- <div v-if="genericAIStore?.state?.currentResponse?.response || genericAIStore?.state?.isLoading" class="container-father-my-message">
+        <div class="container-my-message" :style="colors.user">
+          <p>{{ genericAIStore?.state?.currentResponse?.pergunta }}</p>
+        </div>
+      </div>
+      <div v-if="genericAIStore?.state?.currentResponse?.response || genericAIStore?.state?.isLoading" class="container-father-ai-message">
+        <div class="container-ai-message">
+          <img :src="staticDetailsStore.whichLogoResponseAi" alt="" />
+          <div class="ai-message">
+            {{ genericAIStore?.state?.currentResponse?.resposta }}
+          </div>
+        </div>
+      </div> -->
+  <!-- <div class="container-is-typing" :style="colors.aiTyping"> -->
+    <!-- <p>...</p> -->
+  <!-- </div> -->
     </div>
   </div>
 </template>

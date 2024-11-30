@@ -16,7 +16,7 @@ const router = createRouter({
       component: () => import('@/views/chat/ChatView.vue'),
       children: [
         {
-          path: '',
+          path: ':id',
           name: 'genericAI',
           component: GeneralChat,
           meta: {

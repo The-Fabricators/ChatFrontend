@@ -3,7 +3,8 @@
     justify-content: center;
     align-items: center;
     width: 85%;
-    height: 100%;
+    height: 100%;    
+    padding-right: 20px;
     overflow-y: auto;
 
     .container-day-messages {
@@ -24,7 +25,6 @@
             display: flex;
             flex-direction: column;
             height: 100%;
-            row-gap: 25px;
             .container-father-my-message {
                 display: flex;
                 width: 100%;
@@ -73,5 +73,11 @@
                 }
             }
         }
+    }
+
+    .container-is-typing {
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
     }
 }

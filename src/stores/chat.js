@@ -1,17 +1,23 @@
-import { ref } from "vue";
-import { defineStore } from "pinia";
-import ChatChannels from "@/services/chatChannels";
+import { ref } from 'vue'
+import { defineStore } from 'pinia'
+import Chat from '@/services/chat'
 
 export const useChatStore = defineStore('chat', () => {
-    const chatChannels = ref([]);
-    const getChatChannels = async () => {
-        const data = await ChatChannels.getChatChannels();
-        console.log(data);
-    };
-    const connectWb = () => {
-        const socket = new WebSocket('ws://localhost:8000/ws/chatroom/');
-        console.log(socket);
-    };
+  const chat = ref([])
+  const currentChat = ref({})
 
-    return { chatChannels, getChatChannels, connectWb };
-});
+  const getChat = async (user) => {
+    chat.value = await Chat.getChat(user)
+    return chat.value
+  }
+
+  const getChatById = async (id) => {
+    currentChat.value = await Chat.GetChatById(id)
+  }
+
+  const postChat = async (data) => {
+    chat.value.push(await Chat.postChat(data))
+  }
+
+  return { getChat, postChat, getChatById }
+})

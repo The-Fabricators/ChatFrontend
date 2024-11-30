@@ -1,5 +1,5 @@
 <script setup>
-import { HeaderChat, InputChat, HelpMessage, MessagesArea } from '@/components'
+import { HeaderChat, InputChat, MessagesArea } from '@/components'
 </script>
 
 <template>
