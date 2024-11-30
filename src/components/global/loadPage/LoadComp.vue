@@ -1,6 +1,3 @@
-<script setup>
-</script>
-
 <template>
     <div class="load-page">
         <img src="@/assets/images/Bias/BiasGif.gif" alt="">
