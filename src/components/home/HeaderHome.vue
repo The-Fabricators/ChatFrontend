@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount, shallowRef, computed } from 'vue'
+import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 import { BtnStroke } from '@/components/index'
 import { useDarkMode } from '@/stores/darkMode.js' // Store para gerenciar tema
 

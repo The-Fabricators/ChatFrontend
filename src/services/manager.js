@@ -8,10 +8,10 @@ class ExampleService {
    * @returns {Promise<Array>} A promise that resolves to an array of data.
    * @throws {Error} If an error occurs while retrieving the data.
    */
-  async getData() {
+  async getChats() {
     try {
-      const { data } = await api.get(`/example-url`)
-      return data.results
+      const { data } = await api.get(`/chats`)
+      return data.
     } catch (error) {
       console.log('error in getData', error)
       throw error
