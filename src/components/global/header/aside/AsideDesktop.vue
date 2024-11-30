@@ -3,6 +3,7 @@ import { ref } from 'vue'
 import { useTemplateStore } from '@/stores/template/template'
 import DarkMode from '@/components/darkMode/DarkMode.vue'
 import { IaTitles, AsideUser, ButtonLogout } from '@/components'
+import router from '@/router'
 
 const templateStore = useTemplateStore() // Reactive variable to access titles from the template store.
 const open = ref(false) // Reactive variable to control sidebar state (open or closed).

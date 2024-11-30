@@ -1,15 +1,13 @@
 <script setup>
 import { ref } from 'vue'
-import { HistoryList } from "@/components";
-
+import { HistoryList } from '@/components'
 
 const showMenu = ref(false) // Variable to hide/show aside
 const history = {
   yesterday: ['lorem', 'lorem', 'lorem', 'lorem'],
   last7Days: ['lorem', 'lorem'],
-  last30Days: ['lorem','lorem','lorem','lorem','lorem','lorem'], 
-}; //object with history
-
+  last30Days: ['lorem', 'lorem', 'lorem', 'lorem', 'lorem', 'lorem'],
+} //object with history
 </script>
 
 <template>
@@ -21,27 +19,27 @@ const history = {
     <div class="aside">
       <div class="buttons">
         <div @click="showMenu = !showMenu">
-            <!-- close aside-history -->
+          <!-- close aside-history -->
           <img src="@/assets/images/header/closeX.png" />
         </div>
-        <RouterLink to="/"><img src="@/assets/images/header/edit.png" alt=""></RouterLink> 
+        <RouterLink to="/"><img src="@/assets/images/header/edit.png" alt="" /></RouterLink>
         <!-- Link to create a new chat -->
       </div>
       <div class="list">
-     <HistoryList name="Ontem" :list="history.yesterday"/>
-     <HistoryList name="7 dias anteriores" :list="history.last7Days"/>
-     <HistoryList name="30 dias anteriores" :list="history.last30Days"/>
-    </div>
+        <HistoryList name="Ontem" :list="history.yesterday" />
+        <HistoryList name="7 dias anteriores" :list="history.last7Days" />
+        <HistoryList name="30 dias anteriores" :list="history.last30Days" />
+      </div>
       <div class="footer-aside">
         <div class="circle-icon">
-            <img src="@/assets/images/header/plane.png" alt="">
+          <img src="@/assets/images/header/plane.png" alt="" />
         </div>
         <div>
-            <RouterLink to="/">
+          <RouterLink to="/">
             <h2>Fazer upgrade de plano</h2>
             <span>Acesse os melhores modelos</span>
-            </RouterLink>
-            <!-- link to access the plans page -->
+          </RouterLink>
+          <!-- link to access the plans page -->
         </div>
       </div>
     </div>

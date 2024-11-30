@@ -1,41 +1,41 @@
 <script setup>
-import { ref, onMounted } from 'vue';
-import { useRoute } from 'vue-router';
-import { useStaticDetailsStore } from "@/stores/staticDetails";
+import { ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import { useStaticDetailsStore } from '@/stores/staticDetails'
 
-const staticDetailsStore = useStaticDetailsStore();
+const staticDetailsStore = useStaticDetailsStore()
 
-const route = useRoute();
-const colors = ref({});
+const route = useRoute()
+const colors = ref({})
 
 onMounted(() => {
-    colors.value = staticDetailsStore.whichColor;
-    console.log(colors.value); 
+  colors.value = staticDetailsStore.whichColor
+  console.log(colors.value)
 })
 </script>
 
 <template>
   <div class="container-father-messages">
     <div class="container-day-messages">
-        <h2 class="day">29 de Novembro</h2>
-        <div class="container-messages">
-            <div class="container-father-my-message">
-                <div class="container-my-message" :style="colors.user">
-                    <p>Artigos científicos sobre redação</p>
-                </div>
-            </div>
-            <div class="container-father-ai-message">
-                <div class="container-ai-typing" :style="colors.aiTyping">
-                    <p>...</p>
-                </div>
-                <!-- <div class="container-ai-message">
+      <h2 class="day">29 de Novembro</h2>
+      <div class="container-messages">
+        <div class="container-father-my-message">
+          <div class="container-my-message" :style="colors.user">
+            <p>Artigos científicos sobre redação</p>
+          </div>
+        </div>
+        <div class="container-father-ai-message">
+          <div class="container-ai-typing" :style="colors.aiTyping">
+            <p>...</p>
+          </div>
+          <!-- <div class="container-ai-message">
                     <img :src="staticDetailsStore.whichLogoResponseAi" alt="">
                     <div class="ai-message">
                         <p>Artigos científicos sobre redação são bastante diversos, pois podem abordar temas como técnicas de escrita, redação acadêmica, criatividade na escrita, processos de revisão, entre outros. Para te ajudar, vou sugerir alguns temas e formas de buscar artigos:
                         <strong>Principais temas relacionados à redação: </strong>
                         </p>
                         <ol>
-                            <li>Redação acadêmica: 
+                            <li>Redação acadêmica:
                             </li>
                         </ol>
                         <ul>
@@ -45,8 +45,8 @@ onMounted(() => {
                         </ul>
                     </div>
                 </div> -->
-            </div>
         </div>
+      </div>
     </div>
   </div>
 </template>
