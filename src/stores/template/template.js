@@ -5,23 +5,28 @@ export const useTemplateStore = defineStore('template', () => {
     const iasTypes = [
         {
             Text:'Ciências Naturais',
-            Icon: natural
+            Icon: natural,
+            Path: '/chat/nature/'
         },
         {
             Text:'Linguagens',
-            Icon: reader
+            Icon: reader,
+            Path: '/chat/languages/'
         },
         {
             Text:'Redação',
-            Icon: writer
+            Icon: writer,
+            Path: '/chat/redaction/'
         },
         {
             Text:'Matemática',
-            Icon: mathematics
+            Icon: mathematics,
+            Path: '/chat/math/'
         },
         {
             Text:'Ciências Humanas',
-            Icon: human_science
+            Icon: human_science,
+             Path: '/chat/humans/'
         }
     ]
 

@@ -10,7 +10,7 @@ const router = createRouter({
       component: () => import('@/views/global/HomeView.vue'),
     },
     {
-      path: '/chat/',
+      path: '/chat',
       name: 'chat',
       component: () => import('@/views/chat/ChatView.vue'),
       children: [
@@ -40,8 +40,8 @@ const router = createRouter({
           component: GeneralChat,
         },
         {
-          path: 'Redaction',
-          name: 'Redaction',
+          path: 'redaction',
+          name: 'redaction',
           component: GeneralChat,
         },
       ],

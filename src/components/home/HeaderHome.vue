@@ -2,6 +2,7 @@
 import { ref, onMounted, onBeforeUnmount, shallowRef, computed } from 'vue';
 import { BtnStroke } from '@/components/index';
 import { useDarkMode } from '@/stores/darkMode.js'; // Store para gerenciar tema
+import router from '@/router';
 
 // Estado para largura da tela
 const widthScreen = ref(window.innerWidth);
@@ -39,13 +40,14 @@ const isDarkMode = computed(()=> darkStore.isDarkMode)
       padding="2px"
       border_radius="60px"
       :font_size="widthScreen < 600 ? '35px' : '17px'"
-      :border="isDarkMode ? '3px solid white' : '3px solid black'"
+      :border="isDarkMode ? '2px solid white' : '2px solid black'"
       :color="isDarkMode ? 'white' : 'black'"
       :font_color_hover="isDarkMode ? 'white' : 'dark'"
       :background_color="isDarkMode ? 'white' : 'black'"
       :height="widthScreen < 600 ? '110px' : '55px'"
       font_weight="600"
       :width="widthScreen < 600 ? '300px' : '130px'"
+      @action="router.push('/chat/')"
     />
   </section>
 </template>
