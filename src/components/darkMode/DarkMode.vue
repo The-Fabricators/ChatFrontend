@@ -81,6 +81,10 @@ body {
     font-size: 17px;
     position: relative;
     display: flex;
+<<<<<<< HEAD
+=======
+    // width: 64px;
+>>>>>>> 0995d3f (FIX: rebase fixed)
     height: 34px;
 }
 

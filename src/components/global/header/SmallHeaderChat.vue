@@ -1,7 +1,6 @@
 <script setup>
-import { CentralTheme, AsideSelectorDesktop, AsideHistory, AsideMobile } from '@/components'
+import { CentralTheme, AsideHistory, AsideMobile } from '@/components'
 import { useRoute } from 'vue-router'
-import { CentralTheme } from '@/components'
 import { whichText, whichColorAndWidth } from '@/utils'
 
 const route = useRoute()

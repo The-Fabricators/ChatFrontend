@@ -23,7 +23,8 @@ import { HeaderHome } from '@/components'
 =======
          <DefaultBtn style="margin-top: 20px;" text="Fazer Login" padding="2px" border_radius="60px" :font_size="widthScreen < 600 ?'35px' : '17px'" :border="widthScreen < 600 ? '3px solid black' : '2px solid black'" :height="widthScreen < 600 ? '110px' : '55px'" font_weight="600" :width="widthScreen < 600 ? '300px' : '220px'" color="white" />
          <div class="container-down-info">
-          <p>Modo Escuro</p>
+         <DarkMode @toggle="toggleTheme" />
+          <p>{{ isDarkMode ? 'Modo Claro' : 'Modo Escuro' }}</p>
          </div>
 >>>>>>> 8a26f90 (FIX: Fixed rebase erros #50)
       </div>
