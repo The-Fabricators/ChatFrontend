@@ -27,7 +27,7 @@ button{
     width: auto;
     padding: 60px 20px 50px 40px;
     border-radius: 50px 0px 0px 50px;
-    gap: 30px;
+    gap: 20px;
     background-color: var(--aside-background);
 }
 
@@ -52,9 +52,9 @@ button{
     flex-direction: column;
     height: 100vh;
     width: auto;
-    padding: 60px 20px 50px 40px;
+    gap: 20px;
+    padding: 50px 20px 50px 40px;
     border-radius: 20px 0px 0px 20px;
-    gap: 30px;
     background-color: var(--aside-background);
 }
 .icon{
@@ -124,7 +124,6 @@ font-weight: bold;
 }
 
 .logout-button{
-    margin-top: 50px;
     display: flex;
     justify-content: center;
 }
@@ -181,7 +180,8 @@ font-weight: bold;
     display: flex;
     // justify-content: center;
     align-items: center;
-    margin: 50% 0 0 0;
+    justify-content: center;
     width: 100%;
+    margin-top: 20px;
     // border: 1px solid red;
 }

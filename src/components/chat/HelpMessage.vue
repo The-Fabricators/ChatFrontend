@@ -1,14 +1,15 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import { getPathsAndTexts } from '@/utils/chat';
+import { useStaticDetailsStore } from "@/stores/staticDetails";
 import { useRoute } from 'vue-router';
 import { HelpButtons } from '@/components';
 
+const staticDetailsStore = useStaticDetailsStore();
 const route = useRoute();
 const propsContent = ref([]);
 
 onMounted(() => {
-    propsContent.value = getPathsAndTexts(route.path);
+    propsContent.value = staticDetailsStore.getPathsAndTexts;
     console.log(propsContent.value.paths);
 })
 </script>

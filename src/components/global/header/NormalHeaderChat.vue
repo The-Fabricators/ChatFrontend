@@ -2,9 +2,9 @@
 
 import { CentralTheme, AsideDesktop, AsideHistory} from "@/components";
 import { useRoute } from "vue-router";
-import { whichText, whichColor } from "@/utils";
+import { useStaticDetailsStore } from "@/stores/staticDetails";
 
-
+const staticDetailsStore = useStaticDetailsStore();
 const route = useRoute();
 </script>
 
@@ -15,7 +15,7 @@ const route = useRoute();
             <img src="@/assets/images/header/logo.png" class="logo" alt="">
         </div>
         <div class="container-theme">
-            <CentralTheme :text="whichText(route)" :color="whichColor(route)" />
+            <CentralTheme :text="staticDetailsStore.whichText" :color="staticDetailsStore.whichColor" />
         </div>
         <div class="container-type-themes">
            <AsideDesktop />
