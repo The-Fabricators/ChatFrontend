@@ -2,7 +2,6 @@
 
 import { CentralTheme, AsideSelectorDesktop, AsideHistory, AsideMobile } from "@/components";
 import { useRoute } from "vue-router";
-import { CentralTheme } from "@/components";
 import { whichText, whichColorAndWidth } from "@/utils";
 
 
