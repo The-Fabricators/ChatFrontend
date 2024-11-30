@@ -39,15 +39,14 @@ const isDarkMode = computed(()=> darkStore.isDarkMode)
       text="Entrar"
       padding="2px"
       border_radius="60px"
-      :font_size="widthScreen < 600 ? '35px' : '17px'"
-      :border="isDarkMode ? '2px solid white' : '2px solid black'"
+      :font_size="widthScreen < 600 ? '16px' : '17px'"
+      :border="isDarkMode ? '3px solid white' : '3px solid black'"
       :color="isDarkMode ? 'white' : 'black'"
       :font_color_hover="isDarkMode ? 'white' : 'dark'"
       :background_color="isDarkMode ? 'white' : 'black'"
-      :height="widthScreen < 600 ? '110px' : '55px'"
+      :height="widthScreen < 600 ? '60px' : '55px'"
       font_weight="600"
-      :width="widthScreen < 600 ? '300px' : '130px'"
-      @action="router.push('/chat/')"
+      :width="widthScreen < 600 ? '100px' : '130px'"
     />
   </section>
 </template>
