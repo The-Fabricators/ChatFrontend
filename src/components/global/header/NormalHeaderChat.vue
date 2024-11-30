@@ -24,5 +24,5 @@ const route = useRoute();
 </template>
 
 <style scoped>
-@import '@/assets/sass/global/_header.scss';
+@use '@/assets/sass/global/_header.scss';
 </style>

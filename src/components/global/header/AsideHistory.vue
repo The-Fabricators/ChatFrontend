@@ -7,7 +7,7 @@ const showMenu = ref(false) // Variable to hide/show aside
 const history = {
   yesterday: ['lorem', 'lorem', 'lorem', 'lorem'],
   last7Days: ['lorem', 'lorem'],
-  last30Days: ['lorem','lorem','lorem','lorem','lorem','lorem'], 
+  last30Days: ['lorem','lorem','lorem','lorem','lorem','lorem'],
 }; //object with history
 
 </script>
@@ -24,7 +24,7 @@ const history = {
             <!-- close aside-history -->
           <img src="@/assets/images/header/closeX.png" />
         </div>
-        <RouterLink to="/"><img src="@/assets/images/header/edit.png" alt=""></RouterLink> 
+        <RouterLink to="/"><img src="@/assets/images/header/edit.png" alt=""></RouterLink>
         <!-- Link to create a new chat -->
       </div>
       <div class="list">
@@ -49,5 +49,5 @@ const history = {
 </template>
 
 <style scoped>
-@import '@/assets/sass/global/_asideHistory.scss';
+@use '@/assets/sass/global/_asideHistory.scss';
 </style>

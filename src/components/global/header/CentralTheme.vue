@@ -18,5 +18,5 @@ const props = defineProps({
 </template>
 
 <style scoped>
-@import '@/assets/sass/global/_centralTheme.scss';
+@use '@/assets/sass/global/_centralTheme.scss';
 </style>

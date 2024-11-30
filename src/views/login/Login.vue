@@ -11,5 +11,5 @@ const appId = import.meta.env.VITE_PASSAGE_APP_ID
 </script>
 
 <style scoped>
-@import '@/assets/sass/global/_login.scss';
+@use '@/assets/sass/global/_login.scss';
 </style>

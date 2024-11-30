@@ -1,8 +1,8 @@
 <script setup>
-import { ref } from "vue"; 
-import { useTemplateStore } from "@/stores/template/template"; 
+import { ref } from "vue";
+import { useTemplateStore } from "@/stores/template/template";
 import DarkMode from "@/components/darkMode/DarkMode.vue";
-import { IaTitles, AsideUser, ButtonLogout } from "@/components"; 
+import { IaTitles, AsideUser, ButtonLogout } from "@/components";
 
 const templateStore = useTemplateStore(); // Accesses template data from the store.
 
@@ -32,11 +32,11 @@ const dark = ref(true); // Reactive variable to toggle between dark and light th
                 <div class="ias-list">
                     <ul>
                         <!-- Generates a list item (li) for each title in the template store -->
-                        <IaTitles class="ias-titles" 
-                                  v-for="item in templateStore.iasTypes" 
-                                  :key="item.Text" 
-                                  :text="item.Text" 
-                                  :icon="item.Icon" 
+                        <IaTitles class="ias-titles"
+                                  v-for="item in templateStore.iasTypes"
+                                  :key="item.Text"
+                                  :text="item.Text"
+                                  :icon="item.Icon"
                                   :open="open" />
                     </ul>
                 </div>
@@ -50,6 +50,6 @@ const dark = ref(true); // Reactive variable to toggle between dark and light th
 </template>
 
 <style scoped>
-@import '@/assets/sass/global/_asideIaSelector.scss'; 
+@use '@/assets/sass/global/_asideIaSelector.scss';
 /* Imports global SCSS styles, scoped to this component to prevent affecting other elements */
 </style>

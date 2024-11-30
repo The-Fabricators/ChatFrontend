@@ -78,6 +78,6 @@ const dark = ref(true) // Reactive variable to toggle between dark and light the
 </template>
 
 <style scoped>
-@import '@/assets/sass/global/_asideIaSelector.scss';
+@use '@/assets/sass/global/_asideIaSelector.scss';
 /* Imports global SCSS styles, scoped to this component to avoid affecting other elements */
 </style>

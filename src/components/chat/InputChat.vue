@@ -23,5 +23,5 @@ const post = reactive({
 
 
 <style scoped>
-@import '@/assets/sass/chat/_input.scss';
+@use '@/assets/sass/chat/_input.scss';
 </style>

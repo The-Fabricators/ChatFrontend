@@ -24,5 +24,5 @@ const props = defineProps({
 </template>
 
 <style scoped>
-@import '@/assets/sass/chat/_helpButtons.scss';
+@use '@/assets/sass/chat/_helpButtons.scss';
 </style>

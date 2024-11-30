@@ -3,35 +3,35 @@
   import DarkMode from '@/components/darkMode/DarkMode.vue';
   import { useDarkMode } from '@/stores/darkMode.js';
   import { computed } from 'vue';
-  
+
   // Acessando a store para controle do tema
   const darkStore = useDarkMode();
-  
+
   // Computado para verificar o estado do tema
   const isDarkMode = computed(() => darkStore.isDarkMode);
-  
+
   // Importação de imagens
   import lightImage from '@/assets/images/eva.png';
   import darkImage from '@/assets/images/darkMode/eva-white.png';
-  
+
   // Alternar o tema
   function toggleTheme() {
     darkStore.toggleDarkMode(); // Função de alternar tema da store
   }
   </script>
-  
+
   <template>
     <main class="main-home">
       <div class="home-container">
         <HeaderHome />
       </div>
-  
+
       <div class="elements-container">
         <div class="eva-container">
           <!-- Alteração dinâmica da imagem -->
           <img :src="isDarkMode ? darkImage : lightImage" alt="Eva logo" />
         </div>
-  
+
         <div class="info-home-container">
           <div class="i-as-container">
             <h1 class="text t1">I as</h1>
@@ -48,8 +48,7 @@
       </div>
     </main>
   </template>
-  
+
   <style scoped>
-  @import '@/assets/sass/home/_home.scss';
+  @use '@/assets/sass/home/_home.scss';
   </style>
- 
