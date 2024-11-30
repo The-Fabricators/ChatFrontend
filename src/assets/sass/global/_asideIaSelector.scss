@@ -9,7 +9,7 @@ button{
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.31);
     overflow: hidden;
-    
+    z-index: 90;
     transition: .2s linear;
 }
 
@@ -36,11 +36,10 @@ button{
     flex-direction: column;
     height: 100vh;
     width: auto;
-    background-color: $standard-white;
+    background-color: $standard-gray-aside;
     padding: 50px 10px 30px 10px;
     border-radius: 20px 0px 0px 20px;
     gap: 30px;
-    background-color: $standard-white;
 }
 .aside-desktop{
     position: absolute;
@@ -50,11 +49,10 @@ button{
     flex-direction: column;
     height: 100vh;
     width: auto;
-    background-color: $standard-white;
     padding: 60px 20px 50px 40px;
     border-radius: 20px 0px 0px 20px;
     gap: 30px;
-    background-color: $standard-white;
+    background-color: $standard-gray-aside;
 }
 .icon{
     cursor: pointer;

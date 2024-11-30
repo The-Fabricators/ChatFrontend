@@ -10,9 +10,8 @@ const dark = ref(true); // Reactive variable to toggle between dark and light th
 
 <template>
     <div>
-        <div class="background active">
             <!-- Applies a class based on the 'open' variable: 'aside-desktop' when open, 'aside-close' when closed -->
-            <div :class="open ? 'aside-desktop' : 'aside-close'">
+            <div class="container-desktop" :class="open ? 'aside-desktop' : 'aside-close'">
                 <!-- Toggles between 'open' and 'close' classes and handles click event to toggle 'open' state -->
                 <div :class="open ? 'open' : 'close'" @click="open = !open">
                     <!-- Renders different SVGs based on the 'dark' variable -->
@@ -62,7 +61,6 @@ const dark = ref(true); // Reactive variable to toggle between dark and light th
                 <ButtonLogout :open="open" :dark="dark" />
             </div>
         </div>
-    </div>
 </template>
 
 <style scoped>
