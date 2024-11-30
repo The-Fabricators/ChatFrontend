@@ -2,7 +2,9 @@
 
 import { CentralTheme, AsideSelectorDesktop, AsideHistory, AsideMobile } from "@/components";
 import { useRoute } from "vue-router";
-import { whichText, whichColor } from "@/utils";
+import { CentralTheme } from "@/components";
+import { whichText, whichColorAndWidth } from "@/utils";
+
 
 const route = useRoute();
 </script>
@@ -13,7 +15,7 @@ const route = useRoute();
             <AsideHistory/>
         </div>
         <div class="container-theme">
-            <CentralTheme :text="whichText(route)" :color="whichColor(route)" />
+            <CentralTheme :text="whichText(route)" :color="whichColorAndWidth(route)" />
         </div>
         <div class="container-type-themes">
             <AsideMobile />

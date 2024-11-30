@@ -1,7 +1,8 @@
 <script setup>
 import { useRoute } from "vue-router";
+import { whichText, whichColorAndWidth } from "@/utils";
 import { CentralTheme, AsideDesktop, AsideHistory } from "@/components";
-import { whichText, whichColor } from "@/utils";
+
 
 
 const route = useRoute();
@@ -14,7 +15,7 @@ const route = useRoute();
             <img src="@/assets/images/header/logo.png" class="logo" alt="">
         </div>
         <div class="container-theme">
-            <CentralThem2e :text="whichText(route)" :color="whichColor(route)" />
+            <CentralTheme :text="whichText(route)" :color="whichColorAndWidth(route)" />
         </div>
         <div class="container-type-themes">
            <AsideDesktop />
