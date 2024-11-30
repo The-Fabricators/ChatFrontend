@@ -1,5 +1,9 @@
 <script setup>
+<<<<<<< HEAD
 import { HeaderChat, InputChat, HelpMessage, MessagesArea } from '@/components'
+=======
+import { HeaderChat, InputChat, HelpMessage } from '@/components'
+>>>>>>> dc48be4 (FEAT: Created login route and manager service)
 </script>
 
 <template>
