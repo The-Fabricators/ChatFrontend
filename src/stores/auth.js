@@ -10,7 +10,7 @@ export const useAuthStore = defineStore('auth', () => {
     isLogged: false,
     error: false,
     isLoading: ref(false),
-    token: ''
+    token: '',
   })
 
   async function setToken(token) {
@@ -29,31 +29,43 @@ export const useAuthStore = defineStore('auth', () => {
       state.value.isLoading = false
     }
   }
-
   function unsetToken() {
     state.value = {
       user: {},
       isLogged: false,
       error: false,
       isLoading: false,
-      token: ''
+      token: '',
     }
     localStorage.clear()
   }
 
   async function logout() {
+    try {
       state.value.isLoading = true
-      state.value.user = {}
-      state.value.isLogged = false
-      state.value.type = ''
+
+      state.value = {
+        user: {},
+        isLogged: false,
+        error: false,
+        isLoading: false,
+      }
+
+      localStorage.clear()
+
+      await router.push('/login')
+    } catch (error) {
+      console.error('Erro durante o logout:', error)
+      state.value.error = true
+    } finally {
       state.value.isLoading = false
-      router.go('/')
+    }
   }
 
   return {
     setToken,
     unsetToken,
     logout,
-    state
+    state,
   }
 })

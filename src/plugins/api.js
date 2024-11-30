@@ -21,15 +21,15 @@ api.interceptors.request.use(
   },
   (error) => Promise.reject(error),
 )
-
-export default api
-// instance.interceptors.request.use(
+// api.interceptors.response.use(
 //   (config) => {
 //     if (config.isAuthenticated) {
-//       config.headers.Authorization = "Bearer 123";
-//       console.log("Fazendo uma requisicao com auth");
+//       config.headers.Authorization = 'Bearer 123'
+//       console.log('Fazendo uma requisicao com auth')
 //     }
-//     return config;
+//     return config
 //   },
-//   (error) => Promise.reject(error)
-// );
+//   (error) => Promise.reject(error),
+// )
+
+export default api

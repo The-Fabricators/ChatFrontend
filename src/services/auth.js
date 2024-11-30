@@ -16,8 +16,8 @@ class AuthService {
       headers: {
         Authorization: `Bearer ${token}`,
       },
-    });
-    return response.data;
+    })
+    return response.data
   }
 }
 
