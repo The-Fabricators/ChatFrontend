@@ -39,10 +39,10 @@ const isDarkMode = ref(themeStore.isDarkMode);
         <div class="public">
             <label class="switch" :class="{ 'active': themeStore.isDarkMode }">
                 <span class="sun" v-if="!isDarkMode">
-                    <img src="@/assets/images/darkMode/sol.png" alt="">
+                    <img src="@/assets/images/darkMode/lua.svg" alt="">
                 </span>
                 <span class="moon" v-else>
-                    <img src="@/assets/images/darkMode/lua.png" alt="">
+                    <img src="@/assets/images/darkMode/sol.svg" alt="">
                 </span>
                 <input type="checkbox" class="input" :checked="isDarkMode" @change="toggleTheme">
             </label>
@@ -78,8 +78,8 @@ body {
 .switch {
     font-size: 17px;
     position: relative;
-    display: inline-block;
-    width: 64px;
+    display: flex;
+    // width: 64px;
     height: 34px;
 }
 
