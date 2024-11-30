@@ -19,9 +19,15 @@ import { DefaultBtn } from '@/components/'
         <span class="mdi mdi-close"></span>Gerar exercícios para o usuário fazer
       </p>
     </div>
-    <DefaultBtn text="Ativo" background="#2971201A" color="#000000" width="350px" cursor="default" />
+    <DefaultBtn
+      text="Ativo"
+      background="#2971201A"
+      color="#000000"
+      width="350px"
+      cursor="default"
+    />
   </div>
 </template>
 <style scoped>
-@use '@/assets/sass/_subscription.scss';
+@import '@/assets/sass/_subscription.scss';
 </style>

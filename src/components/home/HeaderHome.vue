@@ -1,33 +1,33 @@
 <script setup>
-import { ref, onMounted, onBeforeUnmount, shallowRef, computed } from 'vue';
-import { BtnStroke } from '@/components/index';
-import { useDarkMode } from '@/stores/darkMode.js'; // Store para gerenciar tema
-import router from '@/router';
+import { ref, onMounted, onBeforeUnmount, shallowRef, computed } from 'vue'
+import { BtnStroke } from '@/components/index'
+import { useDarkMode } from '@/stores/darkMode.js' // Store para gerenciar tema
+import router from '@/router'
 
 // Estado para largura da tela
-const widthScreen = ref(window.innerWidth);
+const widthScreen = ref(window.innerWidth)
 
 // Função para atualizar largura da tela ao redimensionar
 function updateWidth() {
-  widthScreen.value = window.innerWidth;
+  widthScreen.value = window.innerWidth
 }
 
 // Adiciona listener ao evento "resize"
 onMounted(() => {
-  window.addEventListener('resize', updateWidth);
-});
+  window.addEventListener('resize', updateWidth)
+})
 
 // Remove listener ao desmontar o componente
 onBeforeUnmount(() => {
-  window.removeEventListener('resize', updateWidth);
-});
+  window.removeEventListener('resize', updateWidth)
+})
 
 // Store para gerenciar o tema
-const darkStore = useDarkMode();
+const darkStore = useDarkMode()
 
 // Computado para verificar o estado do tema
 
-const isDarkMode = computed(()=> darkStore.isDarkMode)
+const isDarkMode = computed(() => darkStore.isDarkMode)
 </script>
 
 <template>
@@ -53,5 +53,5 @@ const isDarkMode = computed(()=> darkStore.isDarkMode)
 </template>
 
 <style scoped>
-@use '@/assets/sass/home/_headerHome.scss';
+@import '@/assets/sass/home/_headerHome.scss';
 </style>

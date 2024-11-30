@@ -1,4 +1,4 @@
-@use '@/assets/sass/_main.scss';
+@import '@/assets/sass/_main.scss';
 
 //style for subscription components
 section {
@@ -47,10 +47,10 @@ section {
       color: $standard-green;
       text-align: center;
     }
-    p{
-        span{
-            color: red;
-        }
+    p {
+      span {
+        color: red;
+      }
     }
   }
 }

@@ -25,5 +25,5 @@ import { DefaultBtn } from '@/components/'
   </div>
 </template>
 <style scoped>
-@use '@/assets/sass/_subscription.scss';
+@import '@/assets/sass/_subscription.scss';
 </style>
