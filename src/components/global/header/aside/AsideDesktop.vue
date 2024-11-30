@@ -2,6 +2,7 @@
 import { ref } from "vue";  
 import { useTemplateStore } from "@/stores/template/template"; 
 import { IaTitles, AsideUser, ButtonLogout } from "@/components"; 
+import router from "@/router";
 
 const templateStore = useTemplateStore(); // Reactive variable to access titles from the template store.
 const open = ref(true); // Reactive variable to control sidebar state (open or closed).
@@ -53,7 +54,8 @@ const dark = ref(true); // Reactive variable to toggle between dark and light th
                                   :key="item.Text" 
                                   :text="item.Text" 
                                   :icon="item.Icon" 
-                                  :open="open" />
+                                  :open="open"
+                                  :pathRoute="item.Path" />
                     </ul>
                 </div>
 
