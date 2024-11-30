@@ -56,6 +56,11 @@ const router = createRouter({
       name: 'subscriptionPlan',
       component: () => import('@/views/subscriptionPlan/SubscriptionPlanView.vue'),
     },
+    {
+      path: '/payment',
+      name: 'payment',
+      component: () => import('@/views/global/PaymentView.vue'),
+    }
   ],
 })
 
