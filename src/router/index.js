@@ -22,27 +22,27 @@ const router = createRouter({
         {
           path: 'nature',
           name: 'nature',
-          component: NatureChat,
+          component: GeneralChat,
         },
         {
           path: 'math',
           name: 'mathematic',
-          component: MathematicChat,
+          component: GeneralChat,
         },
         {
           path: 'humans',
           name: 'humans',
-          component: HumansChat,
+          component: GeneralChat,
         },
         {
           path: 'languages',
           name: 'languages',
-          component: LanguagesChat,
+          component: GeneralChat,
         },
         {
           path: 'Redaction',
           name: 'Redaction',
-          component: RedactionChat,
+          component: GeneralChat,
         },
       ],
     },
