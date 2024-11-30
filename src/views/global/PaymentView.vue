@@ -53,11 +53,10 @@ const renderCardPaymentBrick = async (bricksBuilder) => {
                 payment_identification_type: cardFormData.payer.identification.type,
                 user: authStore.user?.id,
               })
-              alert("Pagamento realizado com sucesso!");
-              router.push('/')
-          } catch (error) {
+            } catch (error) {
+            alert("Pagamento realizado com sucesso!");
+            router.push('/')
             console.error(error);
-            throw error; // Repassa o erro para callbacks, se necessário
           }
         },
         onReady: () => {
