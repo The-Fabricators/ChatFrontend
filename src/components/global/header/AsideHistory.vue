@@ -35,7 +35,7 @@ const history = {
           <img src="@/assets/images/header/plane.png" alt="" />
         </div>
         <div>
-          <RouterLink to="/">
+          <RouterLink to="/subscription-plan">
             <h2>Fazer upgrade de plano</h2>
             <span>Acesse os melhores modelos</span>
           </RouterLink>

@@ -1,145 +1,147 @@
 <script setup>
-import { useDarkMode } from '@/stores/darkMode.js';
-import { onMounted, ref } from 'vue';
+import { useDarkMode } from '@/stores/darkMode.js'
+import { onMounted } from 'vue'
 
 // Pinia store para gerenciar o tema
-const themeStore = useDarkMode();
+const themeStore = useDarkMode()
 
 // Sincronizar estado inicial no carregamento
 onMounted(() => {
-    if (themeStore.isDarkMode) {
-        document.documentElement.classList.add('dark-mode');
-    } else {
-        document.documentElement.classList.remove('dark-mode');
-    }
-});
+  if (themeStore.isDarkMode) {
+    document.documentElement.classList.add('dark-mode')
+  } else {
+    document.documentElement.classList.remove('dark-mode')
+  }
+})
 
 // Função para alternar o tema
 const toggleTheme = () => {
-    themeStore.toggleDarkMode();
+  themeStore.toggleDarkMode()
 
-    // Garantir que o tema seja aplicado corretamente no documento
-    if (themeStore.isDarkMode) {
-        document.documentElement.classList.add('dark-mode');
-    } else {
-        document.documentElement.classList.remove('dark-mode');
-    }
-};
+  // Garantir que o tema seja aplicado corretamente no documento
+  if (themeStore.isDarkMode) {
+    document.documentElement.classList.add('dark-mode')
+  } else {
+    document.documentElement.classList.remove('dark-mode')
+  }
+}
 </script>
 
-
 <template>
-    <div class="container">
-        <div class="public">
-            <label class="switch" :class="{ 'active': themeStore.isDarkMode }">
-                <span class="sun" v-if="!themeStore.isDarkMode">
-                    <img src="@/assets/images/darkMode/lua.svg" alt="">
-                </span>
-                <span class="moon" v-else>
-                    <img src="@/assets/images/darkMode/sol.svg" alt="">
-                </span>
-                <input type="checkbox" class="input" :checked="isDarkMode" @change="toggleTheme">
-            </label>
-        </div>
+  <div class="container">
+    <div class="public">
+      <label class="switch" :class="{ active: themeStore.isDarkMode }">
+        <span class="sun" v-if="!themeStore.isDarkMode">
+          <img src="@/assets/images/darkMode/lua.svg" alt="" />
+        </span>
+        <span class="moon" v-else>
+          <img src="@/assets/images/darkMode/sol.svg" alt="" />
+        </span>
+        <input type="checkbox" class="input" :checked="isDarkMode" @change="toggleTheme" />
+      </label>
     </div>
+  </div>
 </template>
 
 <style lang="scss">
 @media (min-width: 425px) {
-    .sun svg {
-        display: block;
-    }
+  .sun svg {
+    display: block;
+  }
 }
 .sun svg {
-    display: none;
+  display: none;
 }
 :root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --aside-background: #ECECEC;
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --aside-background: #ececec;
 }
 
 .dark-mode {
-    --bg-color: #121212;
-    --text-color: #ffffff;
-    --aside-background: #303030;
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --aside-background: #303030;
 }
 
 body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 .switch {
-    font-size: 17px;
-    position: relative;
-    display: flex;
-    height: 34px;
+  font-size: 17px;
+  position: relative;
+  display: flex;
+  height: 34px;
 }
 
 .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
+  opacity: 0;
+  width: 0;
+  height: 0;
 }
 
-.sun, .moon {
-    cursor: pointer;
+.sun,
+.moon {
+  cursor: pointer;
 }
 
 .sun svg {
-    position: absolute;
-    top: 6px;
-    left: 36px;
-    z-index: 1;
-    width: 24px;
-    height: 24px;
+  position: absolute;
+  top: 6px;
+  left: 36px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
 }
 
 .moon svg {
-    fill: #73C0FC;
-    position: absolute;
-    top: 5px;
-    left: 5px;
-    z-index: 1;
-    width: 24px;
-    height: 24px;
+  fill: #73c0fc;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
 }
 
 .sun svg {
-    animation: rotate 15s linear infinite;
+  animation: rotate 15s linear infinite;
 }
-.container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @keyframes rotate {
-    0% {
-        transform: rotate(0);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .moon svg {
-    animation: tilt 5s linear infinite;
+  animation: tilt 5s linear infinite;
 }
 
 @keyframes tilt {
-    0% {
-        transform: rotate(0deg);
-    }
-    25% {
-        transform: rotate(-10deg);
-    }
-    75% {
-        transform: rotate(10deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(-10deg);
+  }
+  75% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
 }
 </style>
