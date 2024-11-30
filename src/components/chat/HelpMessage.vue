@@ -24,5 +24,5 @@ onMounted(() => {
 </template>
 
 <style scoped>
-@import '@/assets/sass/chat/_help.scss';
+@use '@/assets/sass/chat/_help.scss';
 </style>

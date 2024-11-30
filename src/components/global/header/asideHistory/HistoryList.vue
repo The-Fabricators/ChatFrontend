@@ -23,5 +23,5 @@ const props =defineProps({
 </template>
 
 <style scoped>
-@import '@/assets/sass/global/_asideHistory.scss';
+@use '@/assets/sass/global/_asideHistory.scss';
 </style>

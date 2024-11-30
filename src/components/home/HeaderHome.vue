@@ -53,5 +53,5 @@ const isDarkMode = computed(()=> darkStore.isDarkMode)
 </template>
 
 <style scoped>
-@import '@/assets/sass/home/_headerHome.scss';
+@use '@/assets/sass/home/_headerHome.scss';
 </style>

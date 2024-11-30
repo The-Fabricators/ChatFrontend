@@ -12,5 +12,5 @@ import { HeaderChat, InputChat, HelpMessage, MessagesArea } from "@/components";
 </template>
 
 <style scoped>
-@import '@/assets/sass/chat/_chat.scss';
+@use '@/assets/sass/chat/_chat.scss';
 </style>

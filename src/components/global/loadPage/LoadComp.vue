@@ -6,5 +6,5 @@
 </template>
 
 <style scoped>
-    @import '@/assets/sass/global/_loadPage.scss';
+    @use '@/assets/sass/global/_loadPage.scss';
 </style>

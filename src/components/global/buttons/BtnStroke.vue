@@ -26,7 +26,7 @@ const props = defineProps({
     width: {
         type: String,
         default: '100px'
-    }, 
+    },
     font_weight: {
         type: String,
         default: '500'
@@ -34,11 +34,11 @@ const props = defineProps({
     height: {
         type: String,
         default: 'white'
-    },  
+    },
     color: {
         type: String,
         default: 'black'
-    },  
+    },
     color_hover: {
         type: String,
         default: 'white'
@@ -60,5 +60,5 @@ const hover = shallowRef(false)
     </div>
 </template>
 <style scooped>
-@import '@/assets/sass/global/_buttonStroke.scss';
+@use '@/assets/sass/global/_buttonStroke.scss';
 </style>

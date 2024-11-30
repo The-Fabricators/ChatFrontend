@@ -10,7 +10,7 @@ const colors = ref({});
 
 onMounted(() => {
     colors.value = staticDetailsStore.whichColor;
-    console.log(colors.value); 
+    console.log(colors.value);
 })
 </script>
 
@@ -35,7 +35,7 @@ onMounted(() => {
                         <strong>Principais temas relacionados à redação: </strong>
                         </p>
                         <ol>
-                            <li>Redação acadêmica: 
+                            <li>Redação acadêmica:
                             </li>
                         </ol>
                         <ul>
@@ -52,5 +52,5 @@ onMounted(() => {
 </template>
 
 <style scoped>
-@import '@/assets/sass/chat/_messages.scss';
+@use '@/assets/sass/chat/_messages.scss';
 </style>

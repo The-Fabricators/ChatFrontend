@@ -54,6 +54,6 @@ defineProps({
 </template>
 
 <style scoped>
-@import '@/assets/sass/global/_asideIaSelector.scss';
+@use '@/assets/sass/global/_asideIaSelector.scss';
 /* Imports global SCSS styles specific to this component */
 </style>

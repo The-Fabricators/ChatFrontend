@@ -89,5 +89,5 @@ const props = defineProps({
 </script>
 
 <style scoped>
-@import '@/assets/sass/btn.scss';
+@use '@/assets/sass/btn.scss';
 </style>
