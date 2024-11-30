@@ -24,13 +24,7 @@ const toggleTheme = () => {
     } else {
         document.documentElement.classList.remove('dark-mode');
     }
-
-    // Sincronizar o valor do isDarkMode
-    isDarkMode.value = themeStore.isDarkMode;
 };
-
-// Obter o estado do tema
-const isDarkMode = ref(themeStore.isDarkMode);
 </script>
 
 
@@ -38,7 +32,7 @@ const isDarkMode = ref(themeStore.isDarkMode);
     <div class="container">
         <div class="public">
             <label class="switch" :class="{ 'active': themeStore.isDarkMode }">
-                <span class="sun" v-if="!isDarkMode">
+                <span class="sun" v-if="!themeStore.isDarkMode">
                     <img src="@/assets/images/darkMode/lua.svg" alt="">
                 </span>
                 <span class="moon" v-else>
