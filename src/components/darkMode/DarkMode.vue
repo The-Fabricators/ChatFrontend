@@ -82,9 +82,12 @@ body {
     position: relative;
     display: flex;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
     // width: 64px;
 >>>>>>> 0995d3f (FIX: rebase fixed)
+=======
+>>>>>>> 3d38528 (FEAT: chat dark mode #41)
     height: 34px;
 }
 
