@@ -1,10 +1,20 @@
-.content{
-    display: flex;
-    align-items: center;
+.container{
+    position: absolute;
     height: 100vh;
-    justify-content: center;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .exitButton {
+        position: relative;
+        width: 25px;
+        left: 333px;
+        bottom: 188px;
+        z-index: 2;
+        cursor: pointer;
+    }
 }
 
-.content > *{
+.container > *{
     width: 350px;
 }

@@ -1,4 +1,3 @@
-
 import SmallHeaderChat from "@/components/global/header/SmallHeaderChat.vue";
 import NormalHeaderChat from "@/components/global/header/NormalHeaderChat.vue";
 import HeaderChat from "@/components/global/header/HeaderChat.vue";
@@ -16,14 +15,13 @@ import AsideUser from "@/components/global/header/aside/user/AsideUser.vue";
 import ButtonLogout from "@/components/global/header/aside/user/ButtonLogout.vue";
 import AsideMobile from "./global/header/aside/AsideMobile.vue";
 import AsideDesktop from "@/components/global/header/aside/AsideDesktop.vue";
-
 import AsideHistory from "@/components/global/header/AsideHistory.vue"
 import HistoryList from "@/components/global/header/asideHistory/HistoryList.vue"
-
 import BtnStroke from "./global/buttons/BtnStroke.vue";
 import DefaultBtn from "./global/buttons/DefaultBtn.vue";
 import HeaderHome from "./home/HeaderHome.vue";
 import LoadComp from "./global/loadPage/LoadComp.vue";
+import LoginPassage from "./login/LoginPassage.vue";
 
 export {
     LoadComp,
@@ -48,7 +46,6 @@ export {
     HeaderHome,
     DefaultBtn,
     AsideMobile,
-    AsideDesktop
+    AsideDesktop,
+    LoginPassage
 };
-
-
