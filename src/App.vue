@@ -14,8 +14,6 @@ const getUserInfo = async () => {
     const user = await passageUser.userInfo(authToken);
     if (user) {
       await authStore.setToken(authToken);
-    } else {
-      authStore.unsetToken();
     }
   } catch (error) {
     console.log(error);
@@ -29,7 +27,7 @@ onMounted(() => {
 });
 </script>
 <template>
-  
+
   <div v-if="authStore.state.isLoading">
     <LoadComp />
   </div>
