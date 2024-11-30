@@ -1,0 +1,23 @@
+.load-page{
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.load-content::after{
+    content: '...';
+    font-size: 24px;
+    font-weight: 600;
+    animation: loadAnimation 1s linear infinite;
+}
+
+@keyframes loadAnimation {
+    0%,100%    { content: '.'; }
+    20%   { content: '..'; }
+    80%   { content: '...'; }
+}

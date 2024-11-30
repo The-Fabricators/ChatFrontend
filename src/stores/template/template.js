@@ -1,26 +1,27 @@
 import { defineStore } from 'pinia';
+import { human_science, mathematics, reader, natural, writer } from '@/assets/images';
 
 export const useTemplateStore = defineStore('template', () => {
     const iasTypes = [
         {
             Text:'Ciências Naturais',
-            Icon:'src/assets/images/header/natural-sciences.png'
+            Icon: natural
         },
         {
             Text:'Linguagens',
-            Icon:'src/assets/images/header/writer.png'
+            Icon: reader
         },
         {
             Text:'Redação',
-            Icon:'src/assets/images/header/reader.png'
+            Icon: writer
         },
         {
             Text:'Matemática',
-            Icon:'src/assets/images/header/mathematics.png'
+            Icon: mathematics
         },
         {
             Text:'Ciências Humanas',
-            Icon:'src/assets/images/header/human-sciences.png'
+            Icon: human_science
         }
     ]
 

@@ -6,6 +6,7 @@ import CentralTheme from "@/components/global/header/CentralTheme.vue";
 import InputChat from "@/components/chat/InputChat.vue";
 import HelpMessage from "@/components/chat/HelpMessage.vue";
 import HelpButtons from "@/components/chat/HelpButtons.vue";
+import MessagesArea from "@/components/chat/MessagesArea.vue";
 import GeneralChat from "@/components/chat/GeneralChat.vue";
 import SubscriptionPlan from "@/views/subscriptionPlan/SubscriptionPlanView.vue";
 import  AsideSelectorDesktop from "@/components/global/header/aside/AsideDesktop.vue";
@@ -22,8 +23,10 @@ import HistoryList from "@/components/global/header/asideHistory/HistoryList.vue
 import BtnStroke from "./global/buttons/BtnStroke.vue";
 import DefaultBtn from "./global/buttons/DefaultBtn.vue";
 import HeaderHome from "./home/HeaderHome.vue";
+import LoadComp from "./global/loadPage/LoadComp.vue";
 
 export {
+    LoadComp,
     SmallHeaderChat,
     NormalHeaderChat,
     HeaderChat,
@@ -31,6 +34,7 @@ export {
     InputChat,
     HelpMessage,
     HelpButtons,
+    MessagesArea,
     GeneralChat,
     SubscriptionPlan,
     AsideSelectorDesktop,

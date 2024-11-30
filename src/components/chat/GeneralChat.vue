@@ -1,11 +1,12 @@
 <script setup>
-import { HeaderChat, InputChat, HelpMessage } from "@/components";
+import { HeaderChat, InputChat, HelpMessage, MessagesArea } from "@/components";
 </script>
 
 <template>
   <div class="container">
     <HeaderChat />
-    <HelpMessage />
+    <!-- <HelpMessage /> -->
+     <MessagesArea />
     <InputChat />
   </div>
 </template>

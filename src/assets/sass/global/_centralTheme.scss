@@ -7,6 +7,12 @@ button {
     font-weight: bolder;
 }
 
+@media (min-width: 320px) {
+    button {
+        width: 180px;
+    }
+}
+
 @media (min-width: 1100px) {
     button {
         position: relative;
