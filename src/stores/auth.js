@@ -1,7 +1,6 @@
 import { defineStore } from 'pinia'
 import { useStorage } from '@vueuse/core'
 import { ref } from 'vue'
-import AuthService from '@/services/auth'
 import router from '@/router'
 
 export const useAuthStore = defineStore('auth', () => {
@@ -10,14 +9,13 @@ export const useAuthStore = defineStore('auth', () => {
     isLogged: false,
     error: false,
     isLoading: ref(false),
-    token: '',
   })
 
-  async function setToken(token) {
+  async function getUser() {
     let data
     try {
       state.value.isLoading = true
-      data = await AuthService.getUser(token)
+      data = await useAuthStore.getUser()
     } catch (error) {
       console.log(error)
       error.value = true
@@ -62,7 +60,7 @@ export const useAuthStore = defineStore('auth', () => {
   }
 
   return {
-    setToken,
+    getUser,
     unsetToken,
     logout,
     state,
