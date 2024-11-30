@@ -25,7 +25,6 @@ export const useAuthStore = defineStore('auth', () => {
       console.log(data)
       state.value.user = data
       state.value.isLogged = true
-      state.value.type = data.type
       state.value.isLoading = false
     }
   }
