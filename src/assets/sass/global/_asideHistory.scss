@@ -1,0 +1,136 @@
+@import '@/assets/sass/_main.scss';
+
+@media screen and (min-width: 0px) and (min-device-width: 0px) {
+  //all
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.31);
+    overflow: hidden;
+    transition: 0.2s linear;
+    z-index: 90;
+  }
+
+  .aside {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 310px;
+    background-color: $standard-white;
+    padding: 60px 20px 50px 40px;
+    border-radius: 0px 50px 50px 0px;
+    gap: 30px;
+    background-color: $standard-white;
+  }
+
+  img {
+    cursor: pointer;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  h3 {
+    margin-bottom: 16px;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+
+  li {
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 8px 2px 8px 2px;
+  }
+
+  li:hover {
+    background-color: $standard-grey;
+    padding: 10px;
+    font-weight: 600;
+    border-radius: 10px;
+  }
+  .disable {
+    width: 0px;
+    margin: 0px;
+    padding: 0px;
+  }
+
+  .active {
+    width: 100vw;
+  }
+
+  .circle-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: $standard-yellow;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-aside {
+    height: 10%;
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    gap: 10px;
+  }
+
+  .footer-aside span {
+    font-size: 14px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+  .list {
+    height: 80%;
+    overflow-y: auto;
+  }
+  .aside-history {
+    margin-bottom: 20px;
+  }
+  router-link,
+  a {
+    color: inherit; 
+    text-decoration: none; 
+  }
+}
+
+//scroll bar
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: $standard-grey;
+  border-radius: 20px;
+}
+
+// responsive
+@media screen and (min-width: 600px) and (min-device-width: 600px) {
+  .background {
+    transition: 0.3s linear;
+  }
+
+  .aside {
+    border-radius: 0px;
+  }
+}

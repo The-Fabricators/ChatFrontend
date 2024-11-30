@@ -1,7 +1,9 @@
 <script setup>
 import { useRoute } from "vue-router";
-import { CentralTheme } from "@/components";
 import { whichText, whichColorAndWidth } from "@/utils";
+import { CentralTheme, AsideDesktop, AsideHistory } from "@/components";
+
+
 
 const route = useRoute();
 </script>
@@ -9,14 +11,14 @@ const route = useRoute();
 <template>
   <header>
     <div class="container-historic">
-            <img src="@/assets/images/header/three-bars64.png" alt="">
+            <AsideHistory />
             <img src="@/assets/images/header/logo.png" class="logo" alt="">
         </div>
         <div class="container-theme">
             <CentralTheme :text="whichText(route)" :color="whichColorAndWidth(route)" />
         </div>
         <div class="container-type-themes">
-            <img src="@/assets/images/header/widget.png" alt="">
+           <AsideDesktop />
         </div>
   </header>
 </template>

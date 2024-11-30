@@ -1,27 +1,32 @@
 <template>
   <router-link :to="props.to">
-    <div class="container">
-      <div class="container-children">
-        <span
-          :style="{
-            text: props.text,
-            fontSize: props.fontSize,
-            background: props.background,
-            color: props.color,
-            padding: props.padding,
-            borderRadius: props.borderRadius,
-            width: props.width,
-            height: props.height,
-          }"
-        >
-          {{ props.text }}
-        </span>
-      </div>
+    <div @mouseenter="hover = true" @mouseleave="hover = false" class="container">
+      <span
+        :style="{
+          text: props.text,
+          fontSize: props.fontSize,
+          background: hover ? props.backgroundHover : props.background,
+          padding: props.padding,
+          borderRadius: props.borderRadius,
+          color: hover ? props.colorHover : props.color,
+          width: props.width,
+          height: props.height,
+          cursor: props.cursor,
+          border: hover ? props.borderHover : props.border
+        }"
+      >
+        {{ props.text }}
+      </span>
+      <span class="line"></span>
     </div>
   </router-link>
 </template>
 
 <script setup>
+import { shallowRef } from 'vue'
+
+const hover = shallowRef(false)
+
 const props = defineProps({
   text: {
     type: String,
@@ -46,13 +51,12 @@ const props = defineProps({
   },
   color: {
     type: String,
-    default: 'white',
+    default: '7A1F40',
   },
   borderRadius: {
     type: String,
     default: '52px',
   },
-
   width: {
     type: String,
     default: '324.81px',
@@ -61,6 +65,26 @@ const props = defineProps({
     type: String,
     default: '71px',
   },
+  colorHover: {
+    type: String,
+    default: 'black',
+  },
+  backgroundHover: {
+    type: String,
+    default: 'white',
+  },
+  cursor: {
+    type: String,
+    default: 'pointer',
+  },
+  borderHover: {
+    type: String,
+    default: '2px solid black',
+  },
+  border: {
+    type: String,
+    default: '2px solid black',
+  }
 })
 </script>
 

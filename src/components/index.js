@@ -9,12 +9,24 @@ import HelpButtons from "@/components/chat/HelpButtons.vue";
 import MessagesArea from "@/components/chat/MessagesArea.vue";
 import GeneralChat from "@/components/chat/GeneralChat.vue";
 import SubscriptionPlan from "@/views/subscriptionPlan/SubscriptionPlanView.vue";
+import  AsideSelectorDesktop from "@/components/global/header/aside/AsideDesktop.vue";
+import  AsideSelectorMobile from "./global/header/aside/AsideMobile.vue";
+import IaTitles from "@/components/global/header/aside/titles/IaTitles.vue";
+import AsideUser from "@/components/global/header/aside/user/AsideUser.vue";
+import ButtonLogout from "@/components/global/header/aside/user/ButtonLogout.vue";
+import AsideMobile from "./global/header/aside/AsideMobile.vue";
+import AsideDesktop from "@/components/global/header/aside/AsideDesktop.vue";
+
+import AsideHistory from "@/components/global/header/AsideHistory.vue"
+import HistoryList from "@/components/global/header/asideHistory/HistoryList.vue"
+
 import BtnStroke from "./global/buttons/BtnStroke.vue";
 import DefaultBtn from "./global/buttons/DefaultBtn.vue";
 import HeaderHome from "./home/HeaderHome.vue";
-
+import LoadComp from "./global/loadPage/LoadComp.vue";
 
 export {
+    LoadComp,
     SmallHeaderChat,
     NormalHeaderChat,
     HeaderChat,
@@ -25,7 +37,18 @@ export {
     MessagesArea,
     GeneralChat,
     SubscriptionPlan,
+    AsideSelectorDesktop,
+    AsideSelectorMobile,
+    IaTitles,
+    AsideUser,
+    ButtonLogout,
+    AsideHistory,
+    HistoryList,
     BtnStroke,
     HeaderHome,
-    DefaultBtn
+    DefaultBtn,
+    AsideMobile,
+    AsideDesktop
 };
+
+
