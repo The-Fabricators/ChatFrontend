@@ -43,7 +43,6 @@
          <div class="container-down-info">
          <DarkMode @toggle="toggleTheme" />
           <p>{{ isDarkMode ? 'Modo Claro' : 'Modo Escuro' }}</p>
-         </div>
         </div>
       </div>
     </main>
