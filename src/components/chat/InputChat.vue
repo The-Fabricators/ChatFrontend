@@ -1,22 +1,16 @@
 <script setup>
-import { reactive, ref } from 'vue'
-import { useGenericAIStore } from '@/stores'
+import { reactive } from 'vue'
 import { useChatStore } from '@/stores/chat'
 
 const chatStore = useChatStore()
 
-const genericAIStore = useGenericAIStore()
-const message = ref('')
-const post = reactive({
-  input_text: message,
-})
 const data = reactive({
   input: '',
   output: '',
 })
 const sendMessage = () => {
-    chatStore.sendMessage(data.input)
-    data.input_text = ''
+  chatStore.sendMessage(data.input)
+  data.input_text = ''
 }
 </script>
 

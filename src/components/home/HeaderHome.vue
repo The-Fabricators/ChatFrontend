@@ -2,7 +2,6 @@
 import { ref, onMounted, onBeforeUnmount, computed } from 'vue'
 import { BtnStroke } from '@/components/index'
 import { useDarkMode } from '@/stores/darkMode.js' // Store para gerenciar tema
-import router from '@/router'
 
 // Estado para largura da tela
 const widthScreen = ref(window.innerWidth)
