@@ -3,7 +3,7 @@ import api from '@/plugins/api'
 class Chat {
   async getChat(user) {
     try {
-      const { data } = await api.get(`/chats/?user_id=${user}/`)
+      const { data } = await api.get(`/chats/?user_id=${user}`)
       return data
     } catch (error) {
       console.error('Error in GET Chats: ', error)

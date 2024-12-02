@@ -1,34 +1,41 @@
 <script setup>
 import { ref } from 'vue'
 import { HistoryList } from '@/components'
+import { useChatStore } from '@/stores/chat';
+import { useAuthStore } from '@/stores/auth';
+import { useHeaderStore } from '@/stores/header';
 
-const showMenu = ref(false) // Variable to hide/show aside
-const history = {
-  yesterday: ['lorem', 'lorem', 'lorem', 'lorem'],
-  last7Days: ['lorem', 'lorem'],
-  last30Days: ['lorem', 'lorem', 'lorem', 'lorem', 'lorem', 'lorem'],
-} //object with history
+const headerStore = useHeaderStore();
+
+const chatStore = useChatStore()
+const authStore = useAuthStore()
+
+const user = authStore.state.user
+
+function createNewChat(user) {
+  chatStore.postChat(user)
+}
+
+ //object with history
 </script>
 
 <template>
-  <div class="icon" @click="showMenu = !showMenu">
+  <div class="icon" @click="headerStore.showMenu = !headerStore.showMenu">
     <img src="@/assets/images/header/three-bars.png" alt="" />
   </div>
-  <div class="background" :class="showMenu ? 'active' : 'disable'">
+  <div class="background" :class="headerStore.showMenu ? 'active' : 'disable'">
     <!--The element is assigned the class 'active' or 'disable' based on the value of showMenu -->
     <div class="aside">
       <div class="buttons">
-        <div @click="showMenu = !showMenu">
+        <div @click="headerStore.showMenu = !headerStore.showMenu">
           <!-- close aside-history -->
           <img src="@/assets/images/header/closeX.png" />
         </div>
-        <RouterLink to="/"><img src="@/assets/images/header/edit.png" alt="" /></RouterLink>
+        <button @click="createNewChat(user)"><img src="@/assets/images/header/edit.png" alt="" /></button>
         <!-- Link to create a new chat -->
       </div>
       <div class="list">
-        <HistoryList name="Ontem" :list="history.yesterday" />
-        <HistoryList name="7 dias anteriores" :list="history.last7Days" />
-        <HistoryList name="30 dias anteriores" :list="history.last30Days" />
+        <HistoryList name="Hoje" :list="chatStore.chat" />
       </div>
       <div class="footer-aside">
         <div class="circle-icon">

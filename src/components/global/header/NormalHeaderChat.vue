@@ -16,9 +16,9 @@ const route = useRoute()
     <div class="container-theme">
       <CentralTheme :text="staticDetailsStore.whichText" :color="staticDetailsStore.whichColor" />
     </div>
-    <div class="container-type-themes">
+    <!-- <div class="container-type-themes">
       <AsideDesktop />
-    </div>
+    </div> -->
   </header>
 </template>
 

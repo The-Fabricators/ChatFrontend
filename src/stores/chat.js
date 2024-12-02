@@ -1,13 +1,19 @@
 import { ref } from 'vue'
 import { defineStore } from 'pinia'
 import Chat from '@/services/chat'
+import { useRouter } from 'vue-router'
+import { useHeaderStore } from './header'
 
 export const useChatStore = defineStore('chat', () => {
   const chat = ref([])
   const currentChat = ref({})
+  
+  const router = useRouter()
+  const headerStore = useHeaderStore()
 
   const getChat = async (user) => {
-    chat.value = await Chat.getChat(user)
+    const id = user.id
+    chat.value = await Chat.getChat(id)
     return chat.value
   }
 
@@ -16,8 +22,13 @@ export const useChatStore = defineStore('chat', () => {
   }
 
   const postChat = async (data) => {
-    chat.value.push(await Chat.postChat(data))
+    const new_chat = {user: data.id, chat_name: 'chat número ' + (chat.value.length+1)}
+    const response = await Chat.postChat(new_chat)
+    headerStore.showMenu = false
+    console.log(response, 'aaaaaaaa')
+    chat.value.push(response)
+    router.push({ name: 'genericAI', params: { id: response.id } })
   }
 
-  return { getChat, postChat, getChatById }
+  return { getChat, postChat, getChatById, chat, currentChat }
 })
